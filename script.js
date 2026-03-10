@@ -88,6 +88,9 @@
             themeIconSun.classList.toggle('active', currentTheme === 'dark');
             themeIconMoon.classList.toggle('active', currentTheme === 'light');
         }
+        if (themeCurrent) {
+            themeCurrent.textContent = currentTheme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
+        }
     }
 
     function handleNavbarScroll() {

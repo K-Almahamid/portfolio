@@ -238,19 +238,17 @@ html[dir="rtl"] .nav-icon-item:first-of-type::before {
 }
 
 /* Theme toggle: show sun when dark, moon when light */
-#themeToggle {
+.theme-icon-wrap {
     position: relative;
-    width: 40px;
-    min-width: 40px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 #themeToggle .nav-icon-sun,
 #themeToggle .nav-icon-moon {
     position: absolute;
+    inset: 0;
     width: 20px;
     height: 20px;
     opacity: 0;
@@ -1101,10 +1099,6 @@ body.rtl .section-title::after {
         height: 36px;
     }
 
-    #themeToggle {
-        width: 36px;
-        min-width: 36px;
-    }
 
     .footer-copyright,
     .footer-subtitle {
