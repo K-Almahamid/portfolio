@@ -441,6 +441,58 @@ body {
 }
 
 /* ============================================
+   Education & Languages
+   ============================================ */
+
+.education-card,
+.languages-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.languages-card {
+    margin-bottom: 0;
+}
+
+.education-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+}
+
+.education-school {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.education-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.languages-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.languages-list {
+    list-style: none;
+    color: var(--text-secondary);
+}
+
+.languages-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
    Tools & Technologies
    ============================================ */
 

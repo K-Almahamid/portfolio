@@ -82,7 +82,7 @@
      */
     function initScrollAnimations() {
         const animatedElements = document.querySelectorAll(
-            '.skill-card, .project-card, .experience-card, .tool-item'
+            '.skill-card, .project-card, .experience-card, .education-card, .languages-card, .tool-item'
         );
 
         const observerOptions = {
