@@ -101,7 +101,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
+}
+
+/* RTL: align name and tabs to the right with big space between */
+html[dir="rtl"] .nav-container {
+    justify-content: flex-start;
+    gap: 6rem;
+}
+
+html[dir="rtl"] .nav-logo {
+    order: 1;
+}
+
+html[dir="rtl"] .nav-right {
+    order: 2;
 }
 
 .nav-right {
@@ -364,14 +378,18 @@ body.theme-light .nav-dropdown-item .dropdown-menu {
 }
 
 /* RTL: align title and divider to the right */
-html[dir="rtl"] .section-title {
+html[dir="rtl"] .section-title,
+[dir="rtl"] .section-title,
+body.rtl .section-title {
     text-align: right;
 }
 
-html[dir="rtl"] .section-title::after {
-    left: auto;
-    right: 0;
-    background: linear-gradient(270deg, var(--accent), transparent);
+html[dir="rtl"] .section-title::after,
+[dir="rtl"] .section-title::after,
+body.rtl .section-title::after {
+    left: auto !important;
+    right: 0 !important;
+    background: linear-gradient(270deg, var(--accent), transparent) !important;
 }
 
 /* ============================================
@@ -703,8 +721,9 @@ html[dir="rtl"] .section-title::after {
 
 /* Phone numbers: always LTR to prevent RTL reversal */
 .phone-display {
-    direction: ltr;
-    unicode-bidi: isolate;
+    direction: ltr !important;
+    unicode-bidi: embed !important;
+    display: inline-block;
 }
 
 .contact-form {
