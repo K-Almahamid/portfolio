@@ -161,6 +161,9 @@
     function init() {
         setTheme(currentTheme);
         setLanguage(currentLang);
+        if (typeof translations !== 'undefined') {
+            requestAnimationFrame(applyTranslations);
+        }
 
         window.addEventListener('scroll', handleNavbarScroll);
         handleNavbarScroll();
