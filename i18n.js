@@ -87,7 +87,15 @@ const translations = {
             messagePlaceholder: 'Your message',
             send: 'Send'
         },
-        tools: { title: 'Tools & Technologies' },
+        tools: {
+            title: 'Tools & Technologies',
+            framework: 'Framework & Language',
+            backend: 'Backend & Data',
+            mapsRealtime: 'Maps & Real-time',
+            payments: 'Payments',
+            devops: 'DevOps & Deployment',
+            ads: 'Ads & Monetization'
+        },
         themeDark: 'Dark',
         themeLight: 'Light',
         footer: {
@@ -168,7 +176,15 @@ const translations = {
             en: 'الإنجليزية',
             enLevel: 'متمكن'
         },
-        tools: { title: 'الأدوات والتقنيات' },
+        tools: {
+            title: 'الأدوات والتقنيات',
+            framework: 'الإطار واللغة',
+            backend: 'الخلفية والبيانات',
+            mapsRealtime: 'الخرائط والوقت الفعلي',
+            payments: 'المدفوعات',
+            devops: 'DevOps والنشر',
+            ads: 'الإعلانات والربح'
+        },
         themeDark: 'داكن',
         themeLight: 'فاتح',
         contact: {
