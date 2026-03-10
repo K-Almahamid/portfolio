@@ -155,6 +155,18 @@
 
         if (navToggle) navToggle.addEventListener('click', toggleMobileMenu);
         navLinks.forEach((link) => link.addEventListener('click', handleNavClick));
+
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
         if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
 
         document.querySelectorAll('#langDropdownMenu [data-lang]').forEach((item) => {
@@ -165,6 +177,7 @@
                     const bsDropdown = bootstrap.Dropdown.getInstance(langDropdown);
                     if (bsDropdown) bsDropdown.hide();
                 }
+                closeMobileMenu();
             });
         });
 
@@ -176,6 +189,7 @@
                     const bsDropdown = bootstrap.Dropdown.getInstance(themeDropdown);
                     if (bsDropdown) bsDropdown.hide();
                 }
+                closeMobileMenu();
             });
         });
 
