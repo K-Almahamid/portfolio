@@ -205,11 +205,15 @@ html[dir="rtl"] .nav-icon-item:first-of-type::before {
 .nav-icon-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.4rem;
+    min-height: 40px;
+    height: 40px;
+    box-sizing: border-box;
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    padding: 0.5rem 0.75rem;
+    padding: 0 0.75rem;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -236,8 +240,8 @@ html[dir="rtl"] .nav-icon-item:first-of-type::before {
 /* Theme toggle: show sun when dark, moon when light */
 #themeToggle {
     position: relative;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    min-width: 40px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1093,11 +1097,13 @@ body.rtl .section-title::after {
 
     .nav-icon-btn {
         font-size: 0.85rem !important;
+        min-height: 36px;
+        height: 36px;
     }
 
     #themeToggle {
         width: 36px;
-        height: 36px;
+        min-width: 36px;
     }
 
     .footer-copyright,
