@@ -99,15 +99,15 @@ body {
     margin: 0 auto;
     padding: 1rem 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 4rem;
 }
 
-/* RTL: align name and tabs to the right with big space between */
+/* RTL: center with name first (right), then tabs, keep big space between */
 html[dir="rtl"] .nav-container {
-    justify-content: flex-start;
-    gap: 6rem;
+    justify-content: center;
+    gap: 5rem;
 }
 
 html[dir="rtl"] .nav-logo {
