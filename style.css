@@ -161,69 +161,44 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.nav-controls {
+.nav-dropdown-item {
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
-/* Language dropdown - dark theme override */
-.nav-dropdown-btn {
-    background: var(--bg-secondary) !important;
-    border: 1px solid var(--border-color) !important;
+.nav-link-dropdown {
+    background: none !important;
+    border: none !important;
     color: var(--text-primary) !important;
-    padding: 0.4rem 0.75rem !important;
-    font-size: 0.9rem !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.25rem 0.5rem !important;
+    cursor: pointer;
 }
 
-.nav-dropdown-btn:hover,
-.nav-dropdown-btn:focus {
-    background: var(--bg-secondary) !important;
-    border-color: var(--accent) !important;
+.nav-link-dropdown:hover,
+.nav-link-dropdown:focus {
     color: var(--accent) !important;
     box-shadow: none !important;
 }
 
-.nav-controls .dropdown-menu {
+.nav-dropdown-item .dropdown-menu {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
     padding: 0.25rem;
 }
 
-.nav-controls .dropdown-item {
+.nav-dropdown-item .dropdown-item {
     color: var(--text-primary);
     border-radius: 4px;
 }
 
-.nav-controls .dropdown-item:hover {
+.nav-dropdown-item .dropdown-item:hover {
     background: rgba(88, 166, 255, 0.15);
     color: var(--accent);
 }
 
-/* Theme switch - dark theme override */
-.theme-switch {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
 
-.theme-switch .form-check-input {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    cursor: pointer;
-}
-
-.theme-switch .form-check-input:checked {
-    background-color: var(--accent);
-    border-color: var(--accent);
-}
-
-.theme-switch .form-check-label {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    cursor: pointer;
-    user-select: none;
-}
 
 /* ============================================
    Hero Section

@@ -11,19 +11,31 @@
     const DEFAULT_THEME = 'dark';
     const DEFAULT_LANG = 'en';
 
+    const ARABIC_NUMERALS = '٠١٢٣٤٥٦٧٨٩';
+
     let currentLang = localStorage.getItem(STORAGE_LANG) || DEFAULT_LANG;
     let currentTheme = localStorage.getItem(STORAGE_THEME) || DEFAULT_THEME;
 
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLinks = document.querySelectorAll('.nav-menu > li > a');
     const contactForm = document.getElementById('contactForm');
-    const themeToggle = document.getElementById('themeToggle');
-    const themeLabel = document.getElementById('themeLabel');
+    const themeCurrent = document.getElementById('themeCurrent');
     const langCurrent = document.getElementById('langCurrent');
     const langDropdown = document.getElementById('langDropdown');
-    const langDropdownMenu = document.getElementById('langDropdownMenu');
+    const themeDropdown = document.getElementById('themeDropdown');
+
+    function toArabicNumerals(str) {
+        return str.replace(/[0-9]/g, (d) => ARABIC_NUMERALS[parseInt(d, 10)]);
+    }
+
+    function updatePhoneDisplays() {
+        document.querySelectorAll('.phone-display[data-phone]').forEach((el) => {
+            const phone = el.getAttribute('data-phone');
+            el.textContent = currentLang === 'ar' ? toArabicNumerals(phone) : phone;
+        });
+    }
 
     function getTranslation(key) {
         if (typeof translations === 'undefined') return key;
@@ -46,6 +58,7 @@
             const value = getTranslation(key);
             if (value) el.placeholder = value;
         });
+        updatePhoneDisplays();
     }
 
     function setLanguage(lang) {
@@ -57,15 +70,14 @@
         document.body.classList.toggle('lang-ar', lang === 'ar');
         if (langCurrent) langCurrent.textContent = lang === 'en' ? 'EN' : 'AR';
         applyTranslations();
-        if (themeLabel) themeLabel.textContent = currentTheme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
+        if (themeCurrent) themeCurrent.textContent = currentTheme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
     }
 
     function setTheme(theme) {
         currentTheme = theme;
         localStorage.setItem(STORAGE_THEME, theme);
         document.body.classList.toggle('theme-light', theme === 'light');
-        if (themeToggle) themeToggle.checked = theme === 'light';
-        if (themeLabel) themeLabel.textContent = theme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
+        if (themeCurrent) themeCurrent.textContent = theme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
     }
 
     function handleNavbarScroll() {
@@ -90,7 +102,7 @@
 
     function handleNavClick(e) {
         const href = this.getAttribute('href');
-        if (href.startsWith('#')) {
+        if (href && href.startsWith('#') && href.length > 1) {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
@@ -140,12 +152,6 @@
         window.addEventListener('scroll', handleNavbarScroll);
         handleNavbarScroll();
 
-        if (themeToggle) {
-            themeToggle.addEventListener('change', () => {
-                const next = currentTheme === 'dark' ? 'light' : 'dark';
-                setTheme(next);
-            });
-        }
         if (navToggle) navToggle.addEventListener('click', toggleMobileMenu);
         navLinks.forEach((link) => link.addEventListener('click', handleNavClick));
         if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
@@ -156,6 +162,17 @@
                 setLanguage(item.getAttribute('data-lang'));
                 if (typeof bootstrap !== 'undefined' && langDropdown) {
                     const bsDropdown = bootstrap.Dropdown.getInstance(langDropdown);
+                    if (bsDropdown) bsDropdown.hide();
+                }
+            });
+        });
+
+        document.querySelectorAll('#themeDropdownMenu [data-theme]').forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                setTheme(item.getAttribute('data-theme'));
+                if (typeof bootstrap !== 'undefined' && themeDropdown) {
+                    const bsDropdown = bootstrap.Dropdown.getInstance(themeDropdown);
                     if (bsDropdown) bsDropdown.hide();
                 }
             });
