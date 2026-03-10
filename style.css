@@ -522,23 +522,8 @@ body {
     flex-shrink: 0;
 }
 
-.contact-icon-img {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-}
-
-.contact-link .contact-icon-img {
-    filter: invert(1);
-    opacity: 0.8;
-}
-
-.contact-link:hover .contact-icon-img {
-    opacity: 1;
-}
-
-a[href*="wa.me"] .contact-icon-img {
-    filter: none;
+.contact-icon-whatsapp {
+    color: #25d366;
 }
 
 .contact-form {
