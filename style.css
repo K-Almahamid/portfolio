@@ -206,26 +206,36 @@ body.theme-light .theme-toggle .icon-sun {
 
 .lang-toggle {
     display: flex;
-    gap: 0.25rem;
+    gap: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .lang-btn {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border: none;
+    border-radius: 0;
     background: var(--bg-secondary);
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.lang-btn:hover,
-.lang-btn.active {
-    border-color: var(--accent);
+.lang-btn:not(:last-child) {
+    border-inline-end: 1px solid var(--border-color);
+}
+
+.lang-btn:hover {
     color: var(--accent);
-    background: transparent;
+    background: rgba(88, 166, 255, 0.08);
+}
+
+.lang-btn.active {
+    color: var(--accent);
+    background: rgba(88, 166, 255, 0.15);
 }
 
 /* ============================================
