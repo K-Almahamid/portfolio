@@ -363,7 +363,7 @@ body.theme-light .nav-dropdown-item .dropdown-menu {
     margin-bottom: 2.5rem;
     color: var(--text-primary);
     position: relative;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .section-title::after {

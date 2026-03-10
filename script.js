@@ -31,12 +31,9 @@
     }
 
     function updatePhoneDisplays() {
-        const LTR_ISOLATE = '\u2066';
-        const PDI = '\u2069';
         document.querySelectorAll('.phone-display[data-phone]').forEach((el) => {
             const phone = el.getAttribute('data-phone');
-            const display = currentLang === 'ar' ? toArabicNumerals(phone) : phone;
-            el.textContent = LTR_ISOLATE + display + PDI;
+            el.textContent = phone;
             el.setAttribute('dir', 'ltr');
         });
     }
