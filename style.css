@@ -3,10 +3,13 @@
    GitHub-inspired Dark Theme
    ============================================ */
 
-/* Bootstrap overrides - prevent conflicts */
-.navbar .btn, .navbar .form-control, .navbar .form-check-input {
-    --bs-body-bg: transparent;
-    --bs-body-color: inherit;
+/* Bootstrap overrides - dark theme for navbar dropdowns */
+.navbar .dropdown-menu {
+    --bs-dropdown-bg: var(--bg-secondary);
+    --bs-dropdown-link-color: var(--text-primary);
+    --bs-dropdown-link-hover-bg: rgba(88, 166, 255, 0.15);
+    --bs-dropdown-link-hover-color: var(--accent);
+    --bs-dropdown-border-color: var(--border-color);
 }
 
 :root {
@@ -98,6 +101,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
 }
 
 .nav-right {
@@ -167,35 +171,60 @@ body {
 }
 
 .nav-link-dropdown {
-    background: none !important;
-    border: none !important;
+    background: transparent !important;
+    border: 1px solid var(--border-color) !important;
     color: var(--text-primary) !important;
     font-weight: 500;
-    font-size: 0.95rem;
-    padding: 0.25rem 0.5rem !important;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem !important;
     cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-link-dropdown::after {
+    border-top-color: var(--text-primary) !important;
+    margin-left: 0.35em;
 }
 
 .nav-link-dropdown:hover,
-.nav-link-dropdown:focus {
+.nav-link-dropdown:focus,
+.nav-link-dropdown.show {
+    background: var(--bg-secondary) !important;
+    border-color: var(--accent) !important;
     color: var(--accent) !important;
     box-shadow: none !important;
+    outline: none !important;
+}
+
+.nav-link-dropdown:hover::after,
+.nav-link-dropdown:focus::after,
+.nav-link-dropdown.show::after {
+    border-top-color: var(--accent) !important;
 }
 
 .nav-dropdown-item .dropdown-menu {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    padding: 0.25rem;
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    padding: 0.25rem !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
 .nav-dropdown-item .dropdown-item {
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
     border-radius: 4px;
+    padding: 0.4rem 0.75rem;
 }
 
-.nav-dropdown-item .dropdown-item:hover {
-    background: rgba(88, 166, 255, 0.15);
-    color: var(--accent);
+.nav-dropdown-item .dropdown-item:hover,
+.nav-dropdown-item .dropdown-item:focus {
+    background: rgba(88, 166, 255, 0.15) !important;
+    color: var(--accent) !important;
+}
+
+/* Light theme dropdown overrides */
+body.theme-light .nav-dropdown-item .dropdown-menu {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
 }
 
 
@@ -332,6 +361,17 @@ body {
     height: 3px;
     background: linear-gradient(90deg, var(--accent), transparent);
     border-radius: 2px;
+}
+
+/* RTL: align title and divider to the right */
+html[dir="rtl"] .section-title {
+    text-align: right;
+}
+
+html[dir="rtl"] .section-title::after {
+    left: auto;
+    right: 0;
+    background: linear-gradient(270deg, var(--accent), transparent);
 }
 
 /* ============================================
@@ -659,6 +699,12 @@ body {
 
 .contact-icon-whatsapp {
     color: #25d366;
+}
+
+/* Phone numbers: always LTR to prevent RTL reversal */
+.phone-display {
+    direction: ltr;
+    unicode-bidi: isolate;
 }
 
 .contact-form {
