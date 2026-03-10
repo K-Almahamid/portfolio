@@ -84,6 +84,9 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
     background-color: var(--bg-nav);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
@@ -95,12 +98,13 @@ body {
 }
 
 .nav-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     gap: 4rem;
 }
 
@@ -120,7 +124,7 @@ html[dir="rtl"] .nav-right {
 
 .nav-right {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -136,6 +140,8 @@ html[dir="rtl"] .nav-right {
 .nav-menu {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 2rem;
     align-items: center;
 }
@@ -887,7 +893,7 @@ body.rtl .section-title::after {
 
     .nav-menu {
         position: fixed;
-        top: 56px;
+        top: 64px;
         left: -100%;
         width: 100%;
         flex-direction: column;
@@ -898,7 +904,7 @@ body.rtl .section-title::after {
         gap: 0.5rem;
         border-bottom: 1px solid var(--border-color);
         transition: left 0.3s ease;
-        max-height: calc(100vh - 56px);
+        max-height: calc(100vh - 64px);
         overflow-y: auto;
     }
 
