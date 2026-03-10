@@ -54,7 +54,7 @@
         document.querySelectorAll('[data-i18n]').forEach((el) => {
             const key = el.getAttribute('data-i18n');
             const value = getTranslation(key);
-            if (value) el.textContent = value;
+            if (value && value !== key) el.textContent = value;
         });
         document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
             const key = el.getAttribute('data-i18n-placeholder');
