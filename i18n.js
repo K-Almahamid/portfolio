@@ -86,6 +86,8 @@ const translations = {
             send: 'Send'
         },
         tools: { title: 'Tools & Technologies' },
+        themeDark: 'Dark',
+        themeLight: 'Light',
         footer: {
             copyright: '© 2026 Khaled Almahamid',
             subtitle: 'Flutter Developer — Amman, Jordan'
@@ -163,6 +165,8 @@ const translations = {
             enLevel: 'متمكن'
         },
         tools: { title: 'الأدوات والتقنيات' },
+        themeDark: 'داكن',
+        themeLight: 'فاتح',
         contact: {
             title: 'تواصل',
             nameLabel: 'الاسم',

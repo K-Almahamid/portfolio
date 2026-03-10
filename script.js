@@ -20,10 +20,13 @@
     const navLinks = document.querySelectorAll('.nav-menu a');
     const contactForm = document.getElementById('contactForm');
     const themeToggle = document.getElementById('themeToggle');
-    const langEN = document.getElementById('langEN');
-    const langAR = document.getElementById('langAR');
+    const themeLabel = document.getElementById('themeLabel');
+    const langCurrent = document.getElementById('langCurrent');
+    const langDropdown = document.getElementById('langDropdown');
+    const langDropdownMenu = document.getElementById('langDropdownMenu');
 
     function getTranslation(key) {
+        if (typeof translations === 'undefined') return key;
         const keys = key.split('.');
         let value = translations[currentLang];
         for (const k of keys) {
@@ -51,15 +54,18 @@
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
         document.body.classList.toggle('rtl', lang === 'ar');
-        langEN?.classList.toggle('active', lang === 'en');
-        langAR?.classList.toggle('active', lang === 'ar');
+        document.body.classList.toggle('lang-ar', lang === 'ar');
+        if (langCurrent) langCurrent.textContent = lang === 'en' ? 'EN' : 'AR';
         applyTranslations();
+        if (themeLabel) themeLabel.textContent = currentTheme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
     }
 
     function setTheme(theme) {
         currentTheme = theme;
         localStorage.setItem(STORAGE_THEME, theme);
         document.body.classList.toggle('theme-light', theme === 'light');
+        if (themeToggle) themeToggle.checked = theme === 'light';
+        if (themeLabel) themeLabel.textContent = theme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
     }
 
     function handleNavbarScroll() {
@@ -78,7 +84,7 @@
 
     function closeMobileMenu() {
         navMenu.classList.remove('active');
-        navToggle.classList.remove('active');
+        navToggle.classList.toggle('active', false);
         document.body.style.overflow = '';
     }
 
@@ -134,18 +140,26 @@
         window.addEventListener('scroll', handleNavbarScroll);
         handleNavbarScroll();
 
-        if (navToggle) navToggle.addEventListener('click', toggleMobileMenu);
-        navLinks.forEach((link) => link.addEventListener('click', handleNavClick));
-        if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
-
         if (themeToggle) {
-            themeToggle.addEventListener('click', () => {
+            themeToggle.addEventListener('change', () => {
                 const next = currentTheme === 'dark' ? 'light' : 'dark';
                 setTheme(next);
             });
         }
-        if (langEN) langEN.addEventListener('click', () => setLanguage('en'));
-        if (langAR) langAR.addEventListener('click', () => setLanguage('ar'));
+        if (navToggle) navToggle.addEventListener('click', toggleMobileMenu);
+        navLinks.forEach((link) => link.addEventListener('click', handleNavClick));
+        if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
+
+        document.querySelectorAll('#langDropdownMenu [data-lang]').forEach((item) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                setLanguage(item.getAttribute('data-lang'));
+                if (typeof bootstrap !== 'undefined' && langDropdown) {
+                    const bsDropdown = bootstrap.Dropdown.getInstance(langDropdown);
+                    if (bsDropdown) bsDropdown.hide();
+                }
+            });
+        });
 
         if ('IntersectionObserver' in window) initScrollAnimations();
     }

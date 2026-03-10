@@ -3,6 +3,12 @@
    GitHub-inspired Dark Theme
    ============================================ */
 
+/* Bootstrap overrides - prevent conflicts */
+.navbar .btn, .navbar .form-control, .navbar .form-check-input {
+    --bs-body-bg: transparent;
+    --bs-body-color: inherit;
+}
+
 :root {
     --bg-primary: #0d1117;
     --bg-secondary: #161b22;
@@ -40,13 +46,11 @@ body.theme-light .hero {
     background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(246, 248, 250, 0.5) 100%);
 }
 
-/* RTL for Arabic */
-html[dir="rtl"] {
-    font-family: 'Tajawal', 'Inter', sans-serif;
-}
-
-html[dir="rtl"] body {
-    font-family: 'Tajawal', 'Inter', sans-serif;
+/* RTL & fonts for Arabic */
+html[dir="rtl"],
+body.lang-ar,
+body.lang-ar * {
+    font-family: 'Cairo', 'Inter', sans-serif;
 }
 
 * {
@@ -163,79 +167,62 @@ body {
     gap: 1rem;
 }
 
-.theme-toggle .theme-btn {
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+/* Language dropdown - dark theme override */
+.nav-dropdown-btn {
+    background: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.9rem !important;
+}
+
+.nav-dropdown-btn:hover,
+.nav-dropdown-btn:focus {
+    background: var(--bg-secondary) !important;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    box-shadow: none !important;
+}
+
+.nav-controls .dropdown-menu {
     background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem;
+}
+
+.nav-controls .dropdown-item {
     color: var(--text-primary);
-    cursor: pointer;
+    border-radius: 4px;
+}
+
+.nav-controls .dropdown-item:hover {
+    background: rgba(88, 166, 255, 0.15);
+    color: var(--accent);
+}
+
+/* Theme switch - dark theme override */
+.theme-switch {
     display: flex;
     align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
+    gap: 0.5rem;
 }
 
-.theme-toggle .theme-btn:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-.theme-toggle .theme-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.theme-toggle .icon-moon {
-    display: none;
-}
-
-.theme-toggle .icon-sun {
-    display: block;
-}
-
-body.theme-light .theme-toggle .icon-moon {
-    display: block;
-}
-
-body.theme-light .theme-toggle .icon-sun {
-    display: none;
-}
-
-.lang-toggle {
-    display: flex;
-    gap: 0;
+.theme-switch .form-check-input {
+    background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.lang-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 0;
-    background: var(--bg-secondary);
-    color: var(--text-secondary);
     cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.lang-btn:not(:last-child) {
-    border-inline-end: 1px solid var(--border-color);
+.theme-switch .form-check-input:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
 }
 
-.lang-btn:hover {
-    color: var(--accent);
-    background: rgba(88, 166, 255, 0.08);
-}
-
-.lang-btn.active {
-    color: var(--accent);
-    background: rgba(88, 166, 255, 0.15);
+.theme-switch .form-check-label {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 /* ============================================
