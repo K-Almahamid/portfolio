@@ -33,27 +33,33 @@
                 <li><a href="#education" data-i18n="nav.education">Education</a></li>
                 <li><a href="#tools" data-i18n="nav.tools">Tools</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-                <li class="nav-dropdown-item">
-                    <div class="dropdown">
-                        <button class="nav-link-dropdown dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span id="langCurrent">EN</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" id="langDropdownMenu">
-                            <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
-                            <li><a class="dropdown-item" href="#" data-lang="ar">العربية</a></li>
-                        </ul>
-                    </div>
+                <li class="nav-icon-item">
+                    <button class="nav-icon-btn" id="langToggle" type="button" aria-label="Toggle language" title="EN / العربية">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <span class="nav-icon-label" id="langCurrent">EN</span>
+                    </button>
                 </li>
-                <li class="nav-dropdown-item">
-                    <div class="dropdown">
-                        <button class="nav-link-dropdown dropdown-toggle" type="button" id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span id="themeCurrent">Dark</span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" id="themeDropdownMenu">
-                            <li><a class="dropdown-item" href="#" data-theme="dark" data-i18n="themeDark">Dark</a></li>
-                            <li><a class="dropdown-item" href="#" data-theme="light" data-i18n="themeLight">Light</a></li>
-                        </ul>
-                    </div>
+                <li class="nav-icon-item">
+                    <button class="nav-icon-btn" id="themeToggle" type="button" aria-label="Toggle theme" title="Dark / Light">
+                        <svg class="nav-icon nav-icon-sun" id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="nav-icon nav-icon-moon" id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -70,6 +76,8 @@
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary" data-i18n="hero.viewProjects">View Projects</a>
                 <a href="#contact" class="btn btn-secondary" data-i18n="hero.contactMe">Contact Me</a>
+                <a href="assets/documents/cv.pdf" class="btn btn-outline" download data-i18n="hero.downloadCV">Download CV</a>
+                <a href="assets/documents/cover-letter.pdf" class="btn btn-outline" download data-i18n="hero.downloadCoverLetter">Download Cover Letter</a>
             </div>
         </div>
     </section>
@@ -387,7 +395,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>

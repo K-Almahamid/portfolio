@@ -11,7 +11,9 @@ const translations = {
             intro: 'Flutter developer with 3 years of experience delivering high-performance cross-platform apps for Android and iOS, specialized in Clean Architecture and Bloc/Cubit for building reusable, testable code.',
             intro2: 'Strong experience in real-time features, maps integration, and third-party services, focused on scalable, high-quality, user-centered solutions.',
             viewProjects: 'View Projects',
-            contactMe: 'Contact Me'
+            contactMe: 'Contact Me',
+            downloadCV: 'Download CV',
+            downloadCoverLetter: 'Download Cover Letter'
         },
         about: {
             title: 'About Me',
@@ -100,7 +102,9 @@ const translations = {
             intro: 'مطور Flutter بخبرة 3 سنوات في تقديم تطبيقات عالية الأداء عبر منصات أندرويد و iOS، متخصص في Clean Architecture و Bloc/Cubit لبناء كود قابل لإعادة الاستخدام والاختبار.',
             intro2: 'خبرة قوية في الميزات الفورية، تكامل الخرائط، والخدمات الخارجية، مع التركيز على حلول قابلة للتوسع وعالية الجودة ومركزة على المستخدم.',
             viewProjects: 'عرض المشاريع',
-            contactMe: 'تواصل معي'
+            contactMe: 'تواصل معي',
+            downloadCV: 'تحميل السيرة الذاتية',
+            downloadCoverLetter: 'تحميل خطاب التغطية'
         },
         about: {
             title: 'نبذة عني',

@@ -3,15 +3,6 @@
    GitHub-inspired Dark Theme
    ============================================ */
 
-/* Bootstrap overrides - dark theme for navbar dropdowns */
-.navbar .dropdown-menu {
-    --bs-dropdown-bg: var(--bg-secondary);
-    --bs-dropdown-link-color: var(--text-primary);
-    --bs-dropdown-link-hover-bg: rgba(88, 166, 255, 0.15);
-    --bs-dropdown-link-hover-color: var(--accent);
-    --bs-dropdown-border-color: var(--border-color);
-}
-
 :root {
     --bg-primary: #0d1117;
     --bg-secondary: #161b22;
@@ -193,67 +184,62 @@ html[dir="rtl"] .nav-right {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.nav-dropdown-item {
+.nav-icon-item {
     display: flex;
     align-items: center;
 }
 
-.nav-link-dropdown {
-    background: transparent !important;
-    border: 1px solid var(--border-color) !important;
-    color: var(--text-primary) !important;
-    font-weight: 500;
-    font-size: 0.9rem;
-    line-height: 1 !important;
-    padding: 0.4rem 0.75rem !important;
+.nav-icon-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 0.65rem;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 6px;
     transition: all 0.2s ease;
 }
 
-.nav-link-dropdown::after {
-    border-top-color: var(--text-primary) !important;
-    margin-left: 0.35em;
+.nav-icon-btn:hover {
+    background: rgba(88, 166, 255, 0.15);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
-.nav-link-dropdown:hover,
-.nav-link-dropdown:focus,
-.nav-link-dropdown.show {
-    background: var(--bg-secondary) !important;
-    border-color: var(--accent) !important;
-    color: var(--accent) !important;
-    box-shadow: none !important;
-    outline: none !important;
+.nav-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
-.nav-link-dropdown:hover::after,
-.nav-link-dropdown:focus::after,
-.nav-link-dropdown.show::after {
-    border-top-color: var(--accent) !important;
+.nav-icon-label {
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
-.nav-dropdown-item .dropdown-menu {
-    background: var(--bg-secondary) !important;
-    border: 1px solid var(--border-color) !important;
-    padding: 0.25rem !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+/* Theme toggle: show sun when dark, moon when light */
+#themeToggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-dropdown-item .dropdown-item {
-    color: var(--text-primary) !important;
-    border-radius: 4px;
-    padding: 0.4rem 0.75rem;
+#themeToggle .nav-icon-sun,
+#themeToggle .nav-icon-moon {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
-.nav-dropdown-item .dropdown-item:hover,
-.nav-dropdown-item .dropdown-item:focus {
-    background: rgba(88, 166, 255, 0.15) !important;
-    color: var(--accent) !important;
-}
-
-/* Light theme dropdown overrides */
-body.theme-light .nav-dropdown-item .dropdown-menu {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+#themeToggle .nav-icon-sun.active,
+#themeToggle .nav-icon-moon.active {
+    opacity: 1;
 }
 
 
@@ -350,6 +336,18 @@ body.theme-light .nav-dropdown-item .dropdown-menu {
 }
 
 .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
     border-color: var(--accent);
     color: var(--accent);
     transform: translateY(-2px);
@@ -917,9 +915,14 @@ body.rtl .section-title::after {
     }
 
     .nav-menu a,
-    .nav-link-dropdown {
+    .nav-icon-btn {
         display: block;
         padding: 0.75rem 0 !important;
+    }
+
+    .nav-icon-item .nav-icon-btn {
+        display: inline-flex;
+        padding: 0.5rem 0.65rem !important;
     }
 
     html[dir="rtl"] .nav-menu {
@@ -1039,9 +1042,13 @@ body.rtl .section-title::after {
         grid-template-columns: 1fr;
     }
 
-    .nav-link-dropdown {
+    .nav-icon-btn {
         font-size: 0.85rem !important;
-        padding: 0.35rem 0.5rem !important;
+    }
+
+    #themeToggle {
+        width: 36px;
+        height: 36px;
     }
 
     .footer-copyright,

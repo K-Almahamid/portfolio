@@ -23,8 +23,10 @@
     const contactForm = document.getElementById('contactForm');
     const themeCurrent = document.getElementById('themeCurrent');
     const langCurrent = document.getElementById('langCurrent');
-    const langDropdown = document.getElementById('langDropdown');
-    const themeDropdown = document.getElementById('themeDropdown');
+    const langToggle = document.getElementById('langToggle');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIconSun = document.getElementById('themeIconSun');
+    const themeIconMoon = document.getElementById('themeIconMoon');
 
     function toArabicNumerals(str) {
         return str.replace(/[0-9]/g, (d) => ARABIC_NUMERALS[parseInt(d, 10)]);
@@ -71,14 +73,21 @@
         document.body.classList.toggle('lang-ar', lang === 'ar');
         if (langCurrent) langCurrent.textContent = lang === 'en' ? 'EN' : 'AR';
         applyTranslations();
-        if (themeCurrent) themeCurrent.textContent = currentTheme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
+        updateThemeIcon();
     }
 
     function setTheme(theme) {
         currentTheme = theme;
         localStorage.setItem(STORAGE_THEME, theme);
         document.body.classList.toggle('theme-light', theme === 'light');
-        if (themeCurrent) themeCurrent.textContent = theme === 'light' ? getTranslation('themeLight') : getTranslation('themeDark');
+        updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+        if (themeIconSun && themeIconMoon) {
+            themeIconSun.classList.toggle('active', currentTheme === 'dark');
+            themeIconMoon.classList.toggle('active', currentTheme === 'light');
+        }
     }
 
     function handleNavbarScroll() {
@@ -169,29 +178,21 @@
         });
         if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
 
-        document.querySelectorAll('#langDropdownMenu [data-lang]').forEach((item) => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                setLanguage(item.getAttribute('data-lang'));
-                if (typeof bootstrap !== 'undefined' && langDropdown) {
-                    const bsDropdown = bootstrap.Dropdown.getInstance(langDropdown);
-                    if (bsDropdown) bsDropdown.hide();
-                }
+        if (langToggle) {
+            langToggle.addEventListener('click', () => {
+                setLanguage(currentLang === 'en' ? 'ar' : 'en');
                 closeMobileMenu();
             });
-        });
+        }
 
-        document.querySelectorAll('#themeDropdownMenu [data-theme]').forEach((item) => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                setTheme(item.getAttribute('data-theme'));
-                if (typeof bootstrap !== 'undefined' && themeDropdown) {
-                    const bsDropdown = bootstrap.Dropdown.getInstance(themeDropdown);
-                    if (bsDropdown) bsDropdown.hide();
-                }
+        if (themeToggle) {
+            themeToggle.addEventListener('click', () => {
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
                 closeMobileMenu();
             });
-        });
+        }
+
+        updateThemeIcon();
 
         if ('IntersectionObserver' in window) initScrollAnimations();
     }
