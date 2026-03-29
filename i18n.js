@@ -5,7 +5,7 @@
 
 const translations = {
     en: {
-        nav: { about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience', education: 'Education', tools: 'Tools', contact: 'Contact' },
+        nav: { about: 'About', skills: 'Skills', services: 'Services', projects: 'Projects', experience: 'Experience', education: 'Education', tools: 'Tools', contact: 'Contact' },
         hero: {
             subtitle: 'Flutter Developer',
             intro: 'Flutter developer with 3 years of experience delivering high-performance cross-platform apps for Android and iOS, specialized in Clean Architecture and Bloc/Cubit for building reusable, testable code.',
@@ -46,8 +46,28 @@ const translations = {
             devops3: 'Git & app deployment (Google Play, App Store)',
             devops4: 'Strong team collaboration'
         },
+        services: {
+            title: 'Services',
+            lead: 'What I deliver end to end — from mobile releases to web dashboards your team can run day to day.',
+            app: {
+                title: 'Mobile app development',
+                subtitle: 'Flutter apps for Android & iOS — architecture, integrations, and store-ready builds.',
+                body: 'Production-grade cross-platform apps: Clean Architecture, state management, maps, payments, real-time features, and CI/CD toward Google Play and the App Store.'
+            },
+            web: {
+                title: 'Websites & admin dashboards',
+                subtitle: 'Responsive web apps and internal dashboards — clear UX, roles, and data at a glance.',
+                body: 'Landing pages, client portals, and operator dashboards wired to your APIs or Firebase: authentication, charts, tables, and workflows so stakeholders can monitor and manage operations without friction.'
+            }
+        },
         projects: {
             title: 'Projects',
+            lead: 'Selected work — open the store links or dive into full project details.',
+            storeAndroid: 'Android',
+            storeApp: 'App Store',
+            viewDetails: 'View details',
+            detailClose: 'Close',
+            screenshots: 'Screenshots',
             tech: 'Technologies',
             taxi: { name: 'TaxiU & TaxiU Driver Apps', desc: 'Ride-hailing platform (similar to Uber) with dedicated rider and driver apps.', l1: 'Built with Flutter, GetX, and clean architecture, delivering a scalable codebase and optimized app size (~22MB).', l2: 'Implemented Google Maps & Places APIs for live tracking, route directions, custom markers, and location search.', l3: 'Developed custom APIs for ride management and integrated secure payment gateways and OTP verification.', l4: 'Added in-app features: wallet, app/version checkers, internet connectivity handling, push notifications, and real-time ride updates.', l5: 'Delivered full ride-hailing functionality: ride booking, driver assignment, and seamless rider–driver communication.', tech: 'Flutter • GetX • Clean Architecture • Firebase • Google Maps API' },
             wash: { name: 'WashApp & WashApper Apps', desc: 'On-demand laundry and delivery platform for users, couriers, and washers.', l1: 'Developed end-to-end solution for users and service providers, including map-based navigation, cart & checkout, multiple payment options (Stripe, PayPal, Apple/Google Pay), wallet, and order tracking.', l2: 'Optimized app size and performance through reusable widgets and minimal package usage.', tech: 'Flutter • REST APIs • Stripe • Firebase' },
@@ -109,7 +129,7 @@ const translations = {
         }
     },
     ar: {
-        nav: { about: 'نبذة', skills: 'المهارات', projects: 'المشاريع', experience: 'الخبرة', education: 'التعليم', tools: 'الأدوات', contact: 'تواصل' },
+        nav: { about: 'نبذة', skills: 'المهارات', services: 'الخدمات', projects: 'المشاريع', experience: 'الخبرة', education: 'التعليم', tools: 'الأدوات', contact: 'تواصل' },
         hero: {
             subtitle: 'مطور Flutter',
             intro: 'مطور Flutter بخبرة 3 سنوات في تقديم تطبيقات عالية الأداء عبر منصات أندرويد و iOS، متخصص في Clean Architecture و Bloc/Cubit لبناء كود قابل لإعادة الاستخدام والاختبار.',
@@ -150,8 +170,28 @@ const translations = {
             devops3: 'Git ونشر التطبيق (Google Play, App Store)',
             devops4: 'تعاون قوي مع الفريق'
         },
+        services: {
+            title: 'الخدمات',
+            lead: 'ما أقدمه من البداية للنهاية — من إصدارات الجوال إلى لوحات التحكم التي يعتمد عليها فريقك يومياً.',
+            app: {
+                title: 'تطوير تطبيقات الجوال',
+                subtitle: 'تطبيقات Flutter لأندرويد و iOS — بنية، تكاملات، وإصدارات جاهزة للمتاجر.',
+                body: 'تطبيقات عبر المنصات بمستوى إنتاج: Clean Architecture، إدارة الحالة، الخرائط، المدفوعات، الميزات الفورية، وCI/CD باتجاه Google Play وApp Store.'
+            },
+            web: {
+                title: 'مواقع ولوحات تحكم إدارية',
+                subtitle: 'تطبيقات ويب متجاوبة ولوحات داخلية — تجربة واضحة، أدوار، وبيانات في لمحة.',
+                body: 'صفحات هبوط، بوابات عملاء، ولوحات تشغيل متصلة بـ APIs أو Firebase: مصادقة، رسوم بيانية، جداول، وسير عمل يمكّن أصحاب المصلحة من المتابعة والإدارة بسلاسة.'
+            }
+        },
         projects: {
             title: 'المشاريع',
+            lead: 'أعمال مختارة — افتح روابط المتجر أو اطلع على التفاصيل الكاملة للمشروع.',
+            storeAndroid: 'أندرويد',
+            storeApp: 'App Store',
+            viewDetails: 'عرض التفاصيل',
+            detailClose: 'إغلاق',
+            screenshots: 'لقطات الشاشة',
             tech: 'التقنيات',
             taxi: { name: 'تطبيقا TaxiU و TaxiU Driver', desc: 'منصة نقل مشابهة لـ Uber مع تطبيقات مخصصة للركاب والسائقين.', l1: 'بُني بـ Flutter و GetX و Clean Architecture، مع كود قابل للتوسع وحجم تطبيق محسّن (~22MB).', l2: 'تنفيذ Google Maps و Places APIs للتتبع المباشر، اتجاهات المسار، العلامات المخصصة، والبحث عن المواقع.', l3: 'تطوير APIs مخصصة لإدارة الرحلات وتكامل بوابات الدفع الآمنة والتحقق بـ OTP.', l4: 'إضافة ميزات: المحفظة، فحص التطبيق/الإصدار، التعامل مع الاتصال، الإشعارات، وتحديثات الرحلات الفورية.', l5: 'تقديم وظائف النقل الكاملة: حجز الرحلات، تعيين السائق، والتواصل السلس بين الراكب والسائق.', tech: 'Flutter • GetX • Clean Architecture • Firebase • Google Maps API' },
             wash: { name: 'تطبيقا WashApp و WashApper', desc: 'منصة غسيل وتوصيل عند الطلب للمستخدمين والموصلين والغسالين.', l1: 'تطوير حل متكامل للمستخدمين ومقدمي الخدمات، يشمل التنقل بالخرائط، السلة والدفع، خيارات دفع متعددة، المحفظة، وتتبع الطلبات.', l2: 'تحسين حجم وأداء التطبيق من خلال مكونات قابلة لإعادة الاستخدام واستخدام حد أدنى من الحزم.', tech: 'Flutter • REST APIs • Stripe • Firebase' },

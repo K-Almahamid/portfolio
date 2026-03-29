@@ -65,6 +65,157 @@
         applyProjectTechTags();
     }
 
+    const projectOverlay = document.getElementById('projectOverlay');
+    const projectOverlayBody = document.getElementById('projectOverlayBody');
+    let projectOverlayLastFocus = null;
+
+    function initProjectStoreLinks() {
+        document.querySelectorAll('.project-card[data-android-url]').forEach((card) => {
+            const androidUrl = card.getAttribute('data-android-url');
+            const iosUrl = card.getAttribute('data-ios-url');
+            const androidBtn = card.querySelector('[data-store="android"]');
+            const iosBtn = card.querySelector('[data-store="ios"]');
+            if (androidBtn && androidUrl != null) androidBtn.setAttribute('href', androidUrl);
+            if (iosBtn && iosUrl != null) iosBtn.setAttribute('href', iosUrl);
+        });
+    }
+
+    function handleStoreLinkClick(e) {
+        const a = e.target.closest('.btn-store');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (href === '#' || href === '') {
+            e.preventDefault();
+        }
+    }
+
+    function createProjectScreenshotPlaceholders() {
+        const section = document.createElement('section');
+        section.className = 'project-overlay__shots';
+        section.setAttribute('aria-labelledby', 'projectOverlayShotsTitle');
+
+        const heading = document.createElement('h3');
+        heading.id = 'projectOverlayShotsTitle';
+        heading.className = 'project-overlay__shots-title mono';
+        heading.setAttribute('data-i18n', 'projects.screenshots');
+        heading.textContent = 'Screenshots';
+
+        const grid = document.createElement('div');
+        grid.className = 'project-overlay__shots-grid';
+
+        for (let i = 0; i < 3; i += 1) {
+            const fig = document.createElement('figure');
+            fig.className = 'project-shot';
+
+            const frame = document.createElement('div');
+            frame.className = 'project-shot__placeholder';
+            frame.setAttribute('role', 'presentation');
+
+            const cap = document.createElement('figcaption');
+            cap.className = 'project-shot__caption mono';
+            cap.textContent = String(i + 1).padStart(2, '0');
+
+            fig.appendChild(frame);
+            fig.appendChild(cap);
+            grid.appendChild(fig);
+        }
+
+        section.appendChild(heading);
+        section.appendChild(grid);
+        return section;
+    }
+
+    function openProjectDetail(card) {
+        if (!projectOverlay || !projectOverlayBody || !card) return;
+        projectOverlayLastFocus = document.activeElement;
+        projectOverlayBody.replaceChildren();
+
+        const titleEl = card.querySelector('.project-name');
+        const descEl = card.querySelector('.project-description');
+        const detailsEl = card.querySelector('.project-details');
+        const actionsEl = card.querySelector('.project-card-actions');
+        if (!titleEl || !detailsEl) return;
+
+        const title = titleEl.cloneNode(true);
+        title.removeAttribute('id');
+        title.classList.add('project-overlay__title');
+        title.id = 'projectOverlayTitle';
+
+        const frag = document.createDocumentFragment();
+        frag.appendChild(title);
+
+        if (descEl) {
+            const desc = descEl.cloneNode(true);
+            desc.classList.add('project-overlay__desc');
+            frag.appendChild(desc);
+        }
+
+        if (actionsEl) {
+            const actions = actionsEl.cloneNode(true);
+            const detailBtn = actions.querySelector('.project-open-detail');
+            if (detailBtn) detailBtn.remove();
+            actions.classList.add('project-overlay__stores');
+            frag.appendChild(actions);
+        }
+
+        const details = detailsEl.cloneNode(true);
+        details.classList.remove('project-details--collapsed');
+        frag.appendChild(details);
+
+        frag.appendChild(createProjectScreenshotPlaceholders());
+
+        projectOverlayBody.appendChild(frag);
+
+        applyTranslations();
+        applyProjectTechTags();
+
+        projectOverlay.hidden = false;
+        projectOverlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('project-overlay-open');
+
+        const closeBtn = projectOverlay.querySelector('.project-overlay__close');
+        if (closeBtn && typeof closeBtn.focus === 'function') {
+            closeBtn.focus();
+        }
+    }
+
+    function closeProjectDetail() {
+        if (!projectOverlay || !projectOverlayBody) return;
+        projectOverlayBody.replaceChildren();
+        projectOverlay.hidden = true;
+        projectOverlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('project-overlay-open');
+        if (projectOverlayLastFocus && typeof projectOverlayLastFocus.focus === 'function') {
+            projectOverlayLastFocus.focus();
+        }
+        projectOverlayLastFocus = null;
+    }
+
+    function initProjectDetailOverlay() {
+        document.querySelectorAll('.project-open-detail').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.project-card');
+                if (card) openProjectDetail(card);
+            });
+        });
+
+        if (projectOverlay) {
+            projectOverlay.addEventListener('click', (e) => {
+                if (e.target.closest('[data-close-overlay]') || e.target.classList.contains('project-overlay__backdrop')) {
+                    closeProjectDetail();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && projectOverlay && !projectOverlay.hidden) {
+                closeProjectDetail();
+            }
+        });
+
+        document.addEventListener('click', handleStoreLinkClick, true);
+    }
+
     /** Split localized "A • B • C" strings into pill list items */
     function applyProjectTechTags() {
         document.querySelectorAll('[data-i18n-tech]').forEach((list) => {
@@ -168,7 +319,7 @@
 
     function initScrollAnimations() {
         const animatedElements = document.querySelectorAll(
-            '.about-content, .skill-card, .project-card, .experience-card, .education-card, .languages-card, .tools-category-card, .contact-panel'
+            '.about-content, .skill-card, .service-card, .project-card, .experience-card, .education-card, .languages-card, .tools-category-card, .contact-panel'
         );
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
@@ -218,6 +369,9 @@
             }
         });
         if (contactForm) contactForm.addEventListener('submit', handleFormSubmit);
+
+        initProjectStoreLinks();
+        initProjectDetailOverlay();
 
         if (langToggle) {
             langToggle.addEventListener('click', () => {

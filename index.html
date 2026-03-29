@@ -39,6 +39,7 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#about" data-i18n="nav.about">About</a></li>
                 <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#services" data-i18n="nav.services">Services</a></li>
                 <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
                 <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
                 <li><a href="#education" data-i18n="nav.education">Education</a></li>
@@ -186,18 +187,56 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="section section-void section-services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">Services</h2>
+            <p class="section-lead" data-i18n="services.lead">What I deliver end to end — from mobile releases to web dashboards your team can run day to day.</p>
+            <div class="services-grid">
+                <article class="service-card">
+                    <header class="service-card-head">
+                        <span class="service-card-index mono" aria-hidden="true">01</span>
+                        <div class="service-card-titles">
+                            <h3 class="service-card-title" data-i18n="services.app.title">Mobile app development</h3>
+                            <p class="service-card-subtitle" data-i18n="services.app.subtitle">Flutter apps for Android &amp; iOS — architecture, integrations, and store-ready builds.</p>
+                        </div>
+                    </header>
+                    <p class="service-card-body" data-i18n="services.app.body">Production-grade cross-platform apps: Clean Architecture, state management, maps, payments, real-time features, and CI/CD toward Google Play and the App Store.</p>
+                </article>
+                <article class="service-card">
+                    <header class="service-card-head">
+                        <span class="service-card-index mono" aria-hidden="true">02</span>
+                        <div class="service-card-titles">
+                            <h3 class="service-card-title" data-i18n="services.web.title">Websites &amp; admin dashboards</h3>
+                            <p class="service-card-subtitle" data-i18n="services.web.subtitle">Responsive web apps and internal dashboards — clear UX, roles, and data at a glance.</p>
+                        </div>
+                    </header>
+                    <p class="service-card-body" data-i18n="services.web.body">Landing pages, client portals, and operator dashboards wired to your APIs or Firebase: authentication, charts, tables, and workflows so stakeholders can monitor and manage operations without friction.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="section section-void">
         <div class="container">
             <h2 class="section-title" data-i18n="projects.title">Projects</h2>
+            <p class="section-lead section-lead--tight" data-i18n="projects.lead">Selected work — open the store links or dive into full project details.</p>
             <div class="projects-grid">
-                <article class="project-card" data-project="taxi">
+                <article class="project-card" data-project="taxi" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">01</span>
                         <h3 class="project-name" data-i18n="projects.taxi.name">TaxiU & TaxiU Driver Apps</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.taxi.desc">Ride-hailing platform (similar to Uber) with dedicated rider and driver apps.</p>
-                    <div class="project-details">
+                    <div class="project-card-actions">
+                        <div class="project-card-actions__stores">
+                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
+                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
+                        </div>
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
                         <ul class="project-highlights">
                             <li data-i18n="projects.taxi.l1">Built with Flutter, GetX, and clean architecture, delivering a scalable codebase and optimized app size (~22MB).</li>
                             <li data-i18n="projects.taxi.l2">Implemented Google Maps & Places APIs for live tracking, route directions, custom markers, and location search.</li>
@@ -211,13 +250,20 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="wash">
+                <article class="project-card" data-project="wash" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">02</span>
                         <h3 class="project-name" data-i18n="projects.wash.name">WashApp & WashApper Apps</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.wash.desc">On-demand laundry and delivery platform for users, couriers, and washers.</p>
-                    <div class="project-details">
+                    <div class="project-card-actions">
+                        <div class="project-card-actions__stores">
+                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
+                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
+                        </div>
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
                         <ul class="project-highlights">
                             <li data-i18n="projects.wash.l1">Developed end-to-end solution for users and service providers, including map-based navigation, cart & checkout, multiple payment options (Stripe, PayPal, Apple/Google Pay), wallet, and order tracking.</li>
                             <li data-i18n="projects.wash.l2">Optimized app size and performance through reusable widgets and minimal package usage.</li>
@@ -228,13 +274,20 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="expert">
+                <article class="project-card" data-project="expert" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">03</span>
                         <h3 class="project-name" data-i18n="projects.expert.name">Expert World App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.expert.desc">Marketing and service booking platform with real-time communication.</p>
-                    <div class="project-details">
+                    <div class="project-card-actions">
+                        <div class="project-card-actions__stores">
+                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
+                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
+                        </div>
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
                         <ul class="project-highlights">
                             <li data-i18n="projects.expert.l1">Implemented a multi-role service booking platform with real-time chat, group communication, calling, and video functionality via Agora.</li>
                             <li data-i18n="projects.expert.l2">Delivered a clean, intuitive UI with scalable, performance-optimized code for seamless multi-user interactions.</li>
@@ -245,13 +298,20 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="nick">
+                <article class="project-card" data-project="nick" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">04</span>
                         <h3 class="project-name" data-i18n="projects.nick.name">NicknameLab App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.nick.desc">Text styling and nickname generator app with built-in ads and offline storage.</p>
-                    <div class="project-details">
+                    <div class="project-card-actions">
+                        <div class="project-card-actions__stores">
+                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
+                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
+                        </div>
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
                         <ul class="project-highlights">
                             <li data-i18n="projects.nick.l1">Developed features for generating unique text styles, symbols, and creative nicknames.</li>
                             <li data-i18n="projects.nick.l2">Integrated Google Ads in three formats: Banner Ads, Interstitial Ads, and Rewarded Ads.</li>
@@ -264,13 +324,20 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="masraf">
+                <article class="project-card" data-project="masraf" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">05</span>
                         <h3 class="project-name" data-i18n="projects.masraf.name">Masrafji App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.masraf.desc">Financial management app with gamification, rewards, vouchers, QR codes, and multi-currency.</p>
-                    <div class="project-details">
+                    <div class="project-card-actions">
+                        <div class="project-card-actions__stores">
+                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
+                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
+                        </div>
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
                         <ul class="project-highlights">
                             <li data-i18n="projects.masraf.l1">Added gamification: custom wheels, loyalty points, and vouchers.</li>
                             <li data-i18n="projects.masraf.l2">Integrated QR code payments and third-party payment gateways with OTP verification.</li>
@@ -282,13 +349,20 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="black">
+                <article class="project-card" data-project="black" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">06</span>
                         <h3 class="project-name" data-i18n="projects.black.name">Black Iris App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.black.desc">Merchant e-commerce app for selling games and gift cards with wallet, plans, and printing integration (~7MB).</p>
-                    <div class="project-details">
+                    <div class="project-card-actions">
+                        <div class="project-card-actions__stores">
+                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
+                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
+                        </div>
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
                         <ul class="project-highlights">
                             <li data-i18n="projects.black.l1">Developed wallet management, product plans, and advanced filters for merchants.</li>
                             <li data-i18n="projects.black.l2">Implemented seamless card printing functionality for operational efficiency.</li>
@@ -523,6 +597,19 @@
         </div>
     </section>
     </main>
+
+    <!-- Project detail screen (overlay) -->
+    <div id="projectOverlay" class="project-overlay" hidden aria-hidden="true">
+        <div class="project-overlay__backdrop" data-close-overlay tabindex="-1" aria-hidden="true"></div>
+        <div class="project-overlay__panel" role="dialog" aria-modal="true" aria-labelledby="projectOverlayTitle">
+            <header class="project-overlay__header">
+                <button type="button" class="btn btn-secondary project-overlay__close" data-close-overlay data-i18n="projects.detailClose">Close</button>
+            </header>
+            <div class="project-overlay__scroller">
+                <div id="projectOverlayBody" class="project-overlay__inner"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
