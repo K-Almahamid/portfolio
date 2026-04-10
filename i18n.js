@@ -8,8 +8,8 @@ const translations = {
         nav: { about: 'About', skills: 'Skills', services: 'Services', projects: 'Projects', experience: 'Experience', education: 'Education', tools: 'Tools', contact: 'Contact' },
         hero: {
             subtitle: 'Flutter Developer',
-            intro: 'Flutter developer with 3 years of experience delivering high-performance cross-platform apps for Android and iOS, specialized in Clean Architecture and Bloc/Cubit for building reusable, testable code.',
-            intro2: 'Strong experience in real-time features, maps integration, and third-party services, focused on scalable, high-quality, user-centered solutions.',
+            intro: 'Flutter Developer with 4+ years of experience delivering production-ready Android & iOS apps across ride-hailing, fintech, and e-commerce.',
+            intro2: 'Expert in Clean Architecture, GetX, Bloc/Cubit, real-time systems, and payment integrations — with a consistent record of cutting app sizes by up to 60%, leading end-to-end app delivery, and shipping 15+ apps to App Store & Google Play.',
             viewProjects: 'View Projects',
             contactMe: 'Contact Me',
             downloadCV: 'Download CV',
@@ -17,34 +17,29 @@ const translations = {
         },
         about: {
             title: 'About Me',
-            p1: 'Flutter developer with 3 years of experience delivering high-performance cross-platform apps for Android and iOS, specialized in Clean Architecture and Bloc/Cubit for building reusable, testable code.',
-            p2: 'Strong experience in real-time features, maps integration, and third-party services, focused on scalable, high-quality, user-centered solutions.',
-            p3: 'Experienced in building production-level apps including ride-hailing systems, e-commerce platforms, service booking systems, and financial applications.'
+            p1: 'Flutter Developer with 4+ years of experience delivering production-ready Android & iOS apps across ride-hailing, fintech, and e-commerce.',
+            p2: 'Expert in Clean Architecture, GetX, Bloc/Cubit, real-time systems, and payment integrations.',
+            p3: 'Consistent record of cutting app sizes by up to 60%, leading end-to-end app delivery, and shipping 15+ apps to App Store & Google Play.'
         },
         skills: {
             title: 'Skills',
-            flutter: 'Flutter & Dart',
-            flutter1: 'Clean Architecture (Data, Domain, Presentation layers)',
-            flutter2: 'State Management: Bloc / Cubit, GetX',
-            backend: 'Backend & Services',
-            backend1: 'REST APIs',
-            backend2: 'Firebase (Auth, Firestore, Cloud Functions)',
-            backend3: 'SQLite (local storage)',
+            proglang: 'Programming Languages',
+            proglang1: 'Dart, Kotlin',
+            frameworks: 'Frameworks & State Management',
+            frameworks1: 'Flutter, Bloc, Cubit, GetX, Clean Architecture, Provider, Flutter Web',
+            backend: 'Backend & APIs',
+            backend1: 'REST APIs, Firebase (Auth, Firestore, Cloud Functions, Analytics, Crashlytics), Laravel',
             maps: 'Maps & Real-Time',
-            maps1: 'Google Maps, Places API & Geolocation',
-            maps2: 'Real-time tracking & live updates',
-            payments: 'Payment Integrations',
-            payments1: 'Stripe, PayPal, Google Pay, Apple Pay',
-            payments2: 'Zain Cash, Orange, Umniah, Dinark',
-            integrations: 'Integrations',
-            int1: 'Social authentication (Google, Facebook, Apple)',
-            int2: 'Agora (voice & video calling)',
-            int3: 'Push notifications & background location',
-            devops: 'DevOps & Soft Skills',
-            devops1: 'CI/CD pipelines & Fastlane',
-            devops2: 'Performance optimization & app size reduction',
-            devops3: 'Git & app deployment (Google Play, App Store)',
-            devops4: 'Strong team collaboration'
+            maps1: 'Google Maps API, Places API, Real-time Tracking, Location Services',
+            payments: 'Payments & Monetization',
+            payments1: 'In-app Purchases, Stripe, PayPal, Google Pay, Apple Pay, Zain Cash, Orange, Umniah, Dinark',
+            databases: 'Databases',
+            databases1: 'SQLite, Firebase Realtime Database, Firestore',
+            tools: 'Tools & CI/CD',
+            tools1: 'Git, GitHub, CI/CD, Fastlane, Testing, Android SDK, iOS SDK, Xcode, Android Studio',
+            tools2: 'Agora (Voice & Video), Push Notifications, Social Authentication',
+            optimization: 'Optimization & Performance',
+            optimization1: 'App performance optimization, app size reduction, animations'
         },
         services: {
             title: 'Services',
@@ -69,33 +64,48 @@ const translations = {
             detailClose: 'Close',
             screenshots: 'Screenshots',
             tech: 'Technologies',
-            taxi: { name: 'TaxiU & TaxiU Driver Apps', desc: 'Ride-hailing platform (similar to Uber) with dedicated rider and driver apps.', l1: 'Built with Flutter, GetX, and clean architecture, delivering a scalable codebase and optimized app size (~22MB).', l2: 'Implemented Google Maps & Places APIs for live tracking, route directions, custom markers, and location search.', l3: 'Developed custom APIs for ride management and integrated secure payment gateways and OTP verification.', l4: 'Added in-app features: wallet, app/version checkers, internet connectivity handling, push notifications, and real-time ride updates.', l5: 'Delivered full ride-hailing functionality: ride booking, driver assignment, and seamless rider–driver communication.', tech: 'Flutter • GetX • Clean Architecture • Firebase • Google Maps API' },
-            wash: { name: 'WashApp & WashApper Apps', desc: 'On-demand laundry and delivery platform for users, couriers, and washers.', l1: 'Developed end-to-end solution for users and service providers, including map-based navigation, cart & checkout, multiple payment options (Stripe, PayPal, Apple/Google Pay), wallet, and order tracking.', l2: 'Optimized app size and performance through reusable widgets and minimal package usage.', tech: 'Flutter • REST APIs • Stripe • Firebase' },
-            expert: { name: 'Expert World App', desc: 'Marketing and service booking platform with real-time communication.', l1: 'Implemented a multi-role service booking platform with real-time chat, group communication, calling, and video functionality via Agora.', l2: 'Delivered a clean, intuitive UI with scalable, performance-optimized code for seamless multi-user interactions.', tech: 'Flutter • Agora SDK • Firebase' },
-            nick: { name: 'NicknameLab App', desc: 'Text styling and nickname generator app with built-in ads and offline storage.', l1: 'Developed features for generating unique text styles, symbols, and creative nicknames.', l2: 'Integrated Google Ads in three formats: Banner Ads, Interstitial Ads, and Rewarded Ads.', l3: 'Implemented SQLite for offline data storage and efficient retrieval of user preferences.', l4: 'Delivered a lightweight, user-friendly app with scalable, reusable code.', tech: 'Flutter • SQLite • Google Ads' },
-            masraf: { name: 'Masrafji App', desc: 'Financial management app with gamification, rewards, vouchers, QR codes, and multi-currency.', l1: 'Added gamification: custom wheels, loyalty points, and vouchers.', l2: 'Integrated QR code payments and third-party payment gateways with OTP verification.', l3: 'Enabled multi-currency expense tracking and merchant categorization.', tech: 'Flutter • Payment APIs • QR code system' },
-            black: { name: 'Black Iris App', desc: 'Merchant e-commerce app for selling games and gift cards with wallet, plans, and printing integration (~7MB).', l1: 'Developed wallet management, product plans, and advanced filters for merchants.', l2: 'Implemented seamless card printing functionality for operational efficiency.', l3: 'Delivered a highly optimized, compact app (7MB) with clean, reusable code.', tech: 'Flutter • REST APIs • SQLite' }
+            taxi: { name: 'TaxiK & TaxiK Driver Apps', desc: 'Ride-hailing rider & driver apps with live maps, Firebase real-time rides, and lean ~18MB builds.', l1: 'Flutter + Clean Architecture with a Flutter–native Kotlin bridge for advanced device capabilities.', l2: 'Google Maps & Places for search, animated driver markers with bearing, route polylines, and live location streaming.', l3: 'Real-time ride sync via Firebase Realtime Database / Firestore plus hardened REST integrations.', l4: 'CI/CD, Crashlytics, App Aliases, and testing discipline to ship a ~18MB production build.', l5: 'End-to-end ride booking, dispatch, and rider–driver coordination tuned for production traffic.', tech: 'Flutter • Kotlin bridge • Clean Architecture • Google Maps & Places • Firebase RTDB / Firestore • REST • CI/CD • Crashlytics' },
+            brain: { name: 'Brainogram App', desc: 'AI-based trading strategies platform with accounts, notifications, and credits.', l1: 'Architected with Bloc/Cubit and Clean Architecture (SOLID), covering AI trading flows, account handling, notifications, and credit management.', l2: 'In-app purchases plus Screen Coach / highlight onboarding; polished animations and secure real-time trading UX.', tech: 'Flutter • Bloc/Cubit • Clean Architecture • In-app purchases • Trading APIs' },
+            expert: { name: 'Expert World App', desc: 'Marketing and service booking platform with HD voice & video.', l1: 'Multi-role marketing and service booking app with real-time chat, group communication, HD voice & video via Agora.', l2: 'Booking-focused UI/UX, backend-driven scheduling, and push notifications; built on Clean Architecture.', l3: 'End-to-end flows for providers and customers with performance-minded, scalable presentation layers.', tech: 'Flutter • Clean Architecture • Agora • REST APIs • Firebase • Push notifications' },
+            black: { name: 'Black Iris App', desc: 'Merchant e-commerce with wallet, plans, invoices, and thermal printer integration (~7MB).', l1: 'Wallet, product plans, and advanced merchant filters for catalog & sales operations.', l2: 'Invoice generation and printer integration with Arabic/English support for retail workflows.', l3: 'Highly optimized build (~7MB) using reusable components and disciplined dependency choices.', tech: 'Flutter • REST • Wallet • Invoicing & printer • Localization • SQLite' },
+            game: { name: 'Gamecard App', desc: 'Merchant app for digital game cards with wallet and local operator payments.', l1: 'Wallet-centric flows for selling digital game cards and managing merchant balances.', l2: 'Embedded regional payment paths: Umniah, Orange, Zain, and Dinark for frictionless top-ups.', l3: 'Streamlined purchase journeys with robust error handling and reconciliation-friendly UX.', tech: 'Flutter • Wallet • Umniah • Orange • Zain • Dinark • REST' },
+            flower: { name: 'Elegant Flower App', desc: 'Full e-commerce flower marketplace with social login and multi-gateway checkout.', l1: 'Clean Architecture e-commerce with catalog, search, cart, and checkout tuned for floral retail.', l2: 'Social authentication plus multi-payment gateway integrations and REST-backed order APIs.', l3: 'UI/UX emphasis on discovery, seasonal promos, and reliable delivery scheduling states.', tech: 'Flutter • Clean Architecture • Social auth • Multi-payment • REST APIs' },
+            nick: { name: 'NicknameLab App', desc: 'Text styling and nickname generator with Google Ads and offline SQLite storage.', l1: 'Creative text styles, symbols, and nickname presets with lightweight generation pipelines.', l2: 'Google Ads monetization across banner, interstitial, and rewarded placements.', l3: 'SQLite-backed offline storage with fast preference sync when connectivity returns.', l4: 'Compact, user-friendly build with reusable widgets and disciplined architecture.', tech: 'Flutter • SQLite • Google Ads' },
+            masraf: { name: 'Masrafji App', desc: 'Personal finance app with games, rewards, vouchers, QR flows, and multi-currency tracking.', l1: 'Engagement layer: custom spin wheels, loyalty points, and redeemable vouchers.', l2: 'QR payments and external gateway integrations with OTP verification.', l3: 'Multi-currency expense tracking with merchant categorization.', tech: 'Flutter • Payment APIs • QR • Firebase' },
+            wash: { name: 'WashApp & WashApper Apps', desc: 'On-demand laundry and delivery platform for customers, couriers, and laundry partners.', l1: 'Full Flutter flows for users and providers: map navigation, cart & checkout, multiple payment options, wallet, and live order tracking.', l2: 'Lean, reusable components and minimal dependencies to keep builds fast and app size efficient.', tech: 'Flutter • REST APIs • Stripe • Firebase • Maps' }
         },
         experience: {
-            title: 'Professional Experience',
-            role: 'Flutter Developer & Team Leader',
-            company: 'Recovery Jordan',
-            date: 'Feb 2023 – 15 Jan 2026',
-            l1: 'Developed high-performance, user-centered mobile applications for Android and iOS using Flutter.',
-            l2: 'Collaborated closely with UI/UX designers and backend teams to deliver seamless, scalable solutions.',
-            l3: 'Led the development team, managing the full project lifecycle from gathering client requirements to delivering functional, efficient applications.',
-            l4: 'Ensured effective communication with clients to understand their needs and translate them into actionable development tasks.'
+            title: 'Work Experience',
+            recovery: {
+                role: 'Flutter Developer & Team Leader',
+                company: 'Recovery Jordan — Amman, Jordan',
+                date: 'Feb 2022 – Jan 2026',
+                l1: 'Led overall IT operations, managing infrastructure, systems, and internal technical support.',
+                l2: 'Managed the full lifecycle of 8+ apps — from requirements and architecture to App Store & Play Store deployment.',
+                l3: 'Collaborated with designers, backend teams, and stakeholders to deliver solutions on schedule.',
+                l4: 'Cut app sizes by up to 60% and boosted performance through code optimization, asset compression, and App Aliases.'
+            },
+            freelance: {
+                role: 'Freelance Flutter Developer',
+                company: 'Clients in Jordan & internationally',
+                date: 'Jan 2022 – Present',
+                l1: 'Delivered 7+ Flutter applications across ride-hailing, fintech, and e-commerce for clients in Jordan and internationally.',
+                l2: 'Built real-time tracking solutions serving live users across Android & iOS.',
+                l3: 'Built financial and merchant management applications.',
+                l4: 'Embedded payment gateways and third-party services.'
+            }
         },
         education: {
             title: 'Education',
             degree: "Bachelor's Degree in Computer Science",
             school: 'Zarqa University',
             date: 'Sep 2018 – Feb 2022',
+            honors: 'Graduated with Honors',
             langTitle: 'Languages',
             ar: 'Arabic',
             arLevel: 'Native',
             en: 'English',
-            enLevel: 'Proficient'
+            enLevel: 'Intermediate'
         },
         contact: {
             title: 'Contact',
@@ -116,7 +126,7 @@ const translations = {
             mapsRealtime: 'Maps & Real-time',
             payments: 'Payments',
             devops: 'DevOps & Deployment',
-            ads: 'Ads & Monetization'
+            ads: 'Ads & Quality'
         },
         themeDark: 'Dark',
         themeLight: 'Light',
@@ -125,15 +135,15 @@ const translations = {
         a11y: { skipToMain: 'Skip to main content' },
         footer: {
             copyright: '© 2026 Khaled Almahamid',
-            subtitle: 'Flutter Developer — Amman, Jordan'
+            subtitle: 'Flutter & Mobile Developer — Amman, Jordan'
         }
     },
     ar: {
         nav: { about: 'نبذة', skills: 'المهارات', services: 'الخدمات', projects: 'المشاريع', experience: 'الخبرة', education: 'التعليم', tools: 'الأدوات', contact: 'تواصل' },
         hero: {
             subtitle: 'مطور Flutter',
-            intro: 'مطور Flutter بخبرة 3 سنوات في تقديم تطبيقات عالية الأداء عبر منصات أندرويد و iOS، متخصص في Clean Architecture و Bloc/Cubit لبناء كود قابل لإعادة الاستخدام والاختبار.',
-            intro2: 'خبرة قوية في الميزات الفورية، تكامل الخرائط، والخدمات الخارجية، مع التركيز على حلول قابلة للتوسع وعالية الجودة ومركزة على المستخدم.',
+            intro: 'مطور Flutter بأكثر من 4 سنوات من الخبرة في تسليم تطبيقات أندرويد و iOS جاهزة للإنتاج في مجالات النقل والتكنولوجيا المالية والتجارة الإلكترونية.',
+            intro2: 'خبير في Clean Architecture و GetX و Bloc/Cubit والأنظمة الفورية وتكاملات الدفع — مع سجل ثابت في تقليل حجم التطبيقات حتى 60%، وقيادة التسليم من الطرف إلى الطرف، وإطلاق أكثر من 15 تطبيقاً على App Store و Google Play.',
             viewProjects: 'عرض المشاريع',
             contactMe: 'تواصل معي',
             downloadCV: 'تحميل السيرة الذاتية',
@@ -141,34 +151,29 @@ const translations = {
         },
         about: {
             title: 'نبذة عني',
-            p1: 'مطور Flutter بخبرة 3 سنوات في تقديم تطبيقات عالية الأداء عبر منصات أندرويد و iOS، متخصص في Clean Architecture و Bloc/Cubit لبناء كود قابل لإعادة الاستخدام والاختبار.',
-            p2: 'خبرة قوية في الميزات الفورية، تكامل الخرائط، والخدمات الخارجية، مع التركيز على حلول قابلة للتوسع وعالية الجودة ومركزة على المستخدم.',
-            p3: 'خبرة في بناء تطبيقات إنتاجية تشمل أنظمة النقل، منصات التجارة الإلكترونية، أنظمة حجز الخدمات، والتطبيقات المالية.'
+            p1: 'مطور Flutter بأكثر من 4 سنوات من الخبرة في تسليم تطبيقات أندرويد و iOS جاهزة للإنتاج في مجالات النقل والتكنولوجيا المالية والتجارة الإلكترونية.',
+            p2: 'خبير في Clean Architecture و GetX و Bloc/Cubit والأنظمة الفورية وتكاملات الدفع.',
+            p3: 'سجل ثابت في تقليل حجم التطبيقات حتى 60%، وقيادة التسليم من الطرف إلى الطرف، وإطلاق أكثر من 15 تطبيقاً على App Store و Google Play.'
         },
         skills: {
             title: 'المهارات',
-            flutter: 'Flutter و Dart',
-            flutter1: 'Clean Architecture (طبقات Data, Domain, Presentation)',
-            flutter2: 'إدارة الحالة: Bloc / Cubit, GetX',
-            backend: 'الخلفية والخدمات',
-            backend1: 'REST APIs',
-            backend2: 'Firebase (Auth, Firestore, Cloud Functions)',
-            backend3: 'SQLite (تخزين محلي)',
+            proglang: 'لغات البرمجة',
+            proglang1: 'Dart، Kotlin',
+            frameworks: 'الأطر وإدارة الحالة',
+            frameworks1: 'Flutter، Bloc، Cubit، GetX، Clean Architecture، Provider، Flutter Web',
+            backend: 'الخلفية وواجهات API',
+            backend1: 'REST APIs، Firebase (Auth, Firestore, Cloud Functions, Analytics, Crashlytics)، Laravel',
             maps: 'الخرائط والوقت الفعلي',
-            maps1: 'Google Maps, Places API و Geolocation',
-            maps2: 'التتبع الفوري والتحديثات المباشرة',
-            payments: 'تكامل الدفع',
-            payments1: 'Stripe, PayPal, Google Pay, Apple Pay',
-            payments2: 'Zain Cash, Orange, Umniah, Dinark',
-            integrations: 'التكاملات',
-            int1: 'المصادقة الاجتماعية (Google, Facebook, Apple)',
-            int2: 'Agora (مكالمات صوتية وفيديو)',
-            int3: 'الإشعارات وتتبع الموقع في الخلفية',
-            devops: 'DevOps والمهارات الناعمة',
-            devops1: 'CI/CD و Fastlane',
-            devops2: 'تحسين الأداء وتقليل حجم التطبيق',
-            devops3: 'Git ونشر التطبيق (Google Play, App Store)',
-            devops4: 'تعاون قوي مع الفريق'
+            maps1: 'Google Maps API، Places API، التتبع الفوري، خدمات الموقع',
+            payments: 'المدفوعات والربح',
+            payments1: 'مشتريات داخل التطبيق، Stripe، PayPal، Google Pay، Apple Pay، Zain Cash، Orange، Umniah، Dinark',
+            databases: 'قواعد البيانات',
+            databases1: 'SQLite، Firebase Realtime Database، Firestore',
+            tools: 'الأدوات وCI/CD',
+            tools1: 'Git، GitHub، CI/CD، Fastlane، اختبار، Android SDK، iOS SDK، Xcode، Android Studio',
+            tools2: 'Agora (صوت وفيديو)، إشعارات دفع، مصادقة اجتماعية',
+            optimization: 'التحسين والأداء',
+            optimization1: 'تحسين أداء التطبيق، تقليل الحجم، وحركات الواجهة'
         },
         services: {
             title: 'الخدمات',
@@ -193,33 +198,48 @@ const translations = {
             detailClose: 'إغلاق',
             screenshots: 'لقطات الشاشة',
             tech: 'التقنيات',
-            taxi: { name: 'تطبيقا TaxiU و TaxiU Driver', desc: 'منصة نقل مشابهة لـ Uber مع تطبيقات مخصصة للركاب والسائقين.', l1: 'بُني بـ Flutter و GetX و Clean Architecture، مع كود قابل للتوسع وحجم تطبيق محسّن (~22MB).', l2: 'تنفيذ Google Maps و Places APIs للتتبع المباشر، اتجاهات المسار، العلامات المخصصة، والبحث عن المواقع.', l3: 'تطوير APIs مخصصة لإدارة الرحلات وتكامل بوابات الدفع الآمنة والتحقق بـ OTP.', l4: 'إضافة ميزات: المحفظة، فحص التطبيق/الإصدار، التعامل مع الاتصال، الإشعارات، وتحديثات الرحلات الفورية.', l5: 'تقديم وظائف النقل الكاملة: حجز الرحلات، تعيين السائق، والتواصل السلس بين الراكب والسائق.', tech: 'Flutter • GetX • Clean Architecture • Firebase • Google Maps API' },
-            wash: { name: 'تطبيقا WashApp و WashApper', desc: 'منصة غسيل وتوصيل عند الطلب للمستخدمين والموصلين والغسالين.', l1: 'تطوير حل متكامل للمستخدمين ومقدمي الخدمات، يشمل التنقل بالخرائط، السلة والدفع، خيارات دفع متعددة، المحفظة، وتتبع الطلبات.', l2: 'تحسين حجم وأداء التطبيق من خلال مكونات قابلة لإعادة الاستخدام واستخدام حد أدنى من الحزم.', tech: 'Flutter • REST APIs • Stripe • Firebase' },
-            expert: { name: 'تطبيق Expert World', desc: 'منصة تسويق وحجز خدمات مع تواصل فوري.', l1: 'تنفيذ منصة حجز خدمات متعددة الأدوار مع دردشة فورية، تواصل جماعي، مكالمات، وفيديو عبر Agora.', l2: 'تقديم واجهة نظيفة وبديهية مع كود قابل للتوسع ومحسّن للأداء.', tech: 'Flutter • Agora SDK • Firebase' },
-            nick: { name: 'تطبيق NicknameLab', desc: 'تطبيق تنسيق النصوص والألقاب مع إعلانات وتخزين دون اتصال.', l1: 'تطوير ميزات لتوليد أنماط نصوص فريدة ورموز وألقاب إبداعية.', l2: 'تكامل Google Ads بثلاث صيغ: إعلانات بانر، بين الصفحات، ومكافأة.', l3: 'تنفيذ SQLite للتخزين دون اتصال واسترجاع تفضيلات المستخدم بكفاءة.', l4: 'تقديم تطبيق خفيف وسهل الاستخدام مع كود قابل للتوسع وإعادة الاستخدام.', tech: 'Flutter • SQLite • Google Ads' },
-            masraf: { name: 'تطبيق مصرفجي', desc: 'تطبيق إدارة مالية مع ألعاب، مكافآت، قسائم، رموز QR، وعملات متعددة.', l1: 'إضافة ألعاب: عجلات مخصصة، نقاط ولاء، وقسائم.', l2: 'تكامل مدفوعات QR وبوابات دفع خارجية مع التحقق بـ OTP.', l3: 'تفعيل تتبع المصروفات بعملات متعددة وتصنيف التجار.', tech: 'Flutter • Payment APIs • QR code system' },
-            black: { name: 'تطبيق Black Iris', desc: 'تطبيق تجارة إلكترونية للتجار لبيع الألعاب وبطاقات الهدايا مع محفظة وخطط وطباعة (~7MB).', l1: 'تطوير إدارة المحفظة، خطط المنتجات، وفلاتر متقدمة للتجار.', l2: 'تنفيذ طباعة البطاقات بسلاسة للكفاءة التشغيلية.', l3: 'تقديم تطبيق محسّن ومضغوط (7MB) مع كود نظيف وقابل لإعادة الاستخدام.', tech: 'Flutter • REST APIs • SQLite' }
+            taxi: { name: 'تطبيقا TaxiK و TaxiK Driver', desc: 'تطبيقا راكب وسائق لنقل الطلبات مع خرائط فورية ومزامنة رحلات عبر Firebase وبناء إنتاجي خفيف (~18MB).', l1: 'Flutter و Clean Architecture مع جسر Flutter–Kotlin لميزات أصلية متقدمة.', l2: 'Google Maps و Places للبحث، علامات سائق متحركة بالاتجاه، خطوط المسار، وبث موقع مباشر.', l3: 'مزامنة الرحلات الفورية عبر Firebase Realtime Database / Firestore وتكاملات REST مُحكَمة.', l4: 'CI/CD و Crashlytics و App Aliases واختبارات لإصدار إنتاجي ~18MB.', l5: 'حجز الرحلات والإسناد والتنسيق بين الراكب والسائق جاهز لحركة إنتاجية.', tech: 'Flutter • جسر Kotlin • Clean Architecture • Google Maps و Places • Firebase RTDB / Firestore • REST • CI/CD • Crashlytics' },
+            brain: { name: 'تطبيق Brainogram', desc: 'منصة استراتيجيات تداول مدعومة بالذكاء الاصطناعي مع حسابات وإشعارات وأرصدة.', l1: 'بنية Bloc/Cubit و Clean Architecture (SOLID) لتدفقات التداول والحسابات والإشعارات وإدارة الرصيد.', l2: 'مشتريات داخل التطبيق وتجربة Screen Coach / شاشات إرشاد؛ حركات مصقولة وتداول فوري آمن.', tech: 'Flutter • Bloc/Cubit • Clean Architecture • مشتريات داخل التطبيق • واجهات تداول' },
+            expert: { name: 'تطبيق Expert World', desc: 'منصة تسويق وحجز خدمات مع صوت وفيديو عالي الجودة.', l1: 'تطبيق متعدد الأدوار للتسويق وحجز الخدمات مع دردشة فورية، تواصل جماعي، صوت وفيديو HD عبر Agora.', l2: 'واجهة مركّزة على الحجز وجداول عبر الخلفية وإشعارات دفع؛ مبني على Clean Architecture.', l3: 'تدفقات كاملة لمقدمي الخدمة والعملاء مع طبقات عرض قابلة للتوسع.', tech: 'Flutter • Clean Architecture • Agora • REST APIs • Firebase • إشعارات دفع' },
+            black: { name: 'تطبيق Black Iris', desc: 'تجارة إلكترونية للتجار مع محفظة وخطط وفواتير وطابعة حرارية (~7MB).', l1: 'محفظة وخطط منتجات وفلاتر متقدمة لعمليات الكتالوج والمبيعات.', l2: 'توليد فواتير وتكامل طابعة بدعم عربي/إنجليزي لسير عمل البيع بالتجزئة.', l3: 'بناء محسّن (~7MB) بمكونات قابلة لإعادة الاستخدام واعتماديات منضبطة.', tech: 'Flutter • REST • محفظة • فواتير وطابعة • توطين • SQLite' },
+            game: { name: 'تطبيق Gamecard', desc: 'تطبيق تجار لبطاقات ألعاب رقمية مع محفظة ومدفوعات مشغلين محليين.', l1: 'تدفقات مركّزة على المحفظة لبيع بطاقات الألعاب الرقمية وإدارة أرصدة التجار.', l2: 'مسارات دفع إقليمية: Umniah و Orange و Zain و Dinark لشحن سلس.', l3: 'رحلات شراء مبسّطة مع معالجة أخطاء قوية وتجربة مناسبة للتسوية.', tech: 'Flutter • محفظة • Umniah • Orange • Zain • Dinark • REST' },
+            flower: { name: 'تطبيق Elegant Flower', desc: 'سوق زهور تجارة إلكترونية كاملة مع تسجيل اجتماعي ودفع متعدد البوابات.', l1: 'تجارة إلكترونية Clean Architecture مع كتالوج وبحث وسلة ودفع مناسب لتجارة الزهور.', l2: 'مصادقة اجتماعية وتكاملات دفع متعددة وواجهات طلب عبر REST.', l3: 'تركيز على الاكتشاف والعروض الموسمية وحالات جدولة التوصيل الموثوقة.', tech: 'Flutter • Clean Architecture • مصادقة اجتماعية • دفع متعدد • REST APIs' },
+            nick: { name: 'تطبيق NicknameLab', desc: 'تنسيق نصوص ومولّد ألقاب مع Google Ads وتخزين SQLite دون اتصال.', l1: 'أنماط نصوص ورموز وقوالب ألقاب إبداعية مع مسارات توليد خفيفة.', l2: 'ربح عبر Google Ads: بانر، بيني، ومكافأة.', l3: 'تخزين دون اتصال بـ SQLite ومزامنة سريعة للتفضيلات عند عودة الاتصال.', l4: 'بناء مضغوط وسهل الاستخدام مع ويدجت قابلة لإعادة الاستخدام وبنية منضبطة.', tech: 'Flutter • SQLite • Google Ads' },
+            masraf: { name: 'تطبيق مصرفجي', desc: 'تطبيق إدارة مالية مع ألعاب، مكافآت، قسائم، رموز QR، وعملات متعددة.', l1: 'ميزات تفاعل: عجلات مخصصة، نقاط ولاء، وقسائم قابلة للاسترداد.', l2: 'مدفوعات QR وتكامل بوابات خارجية مع التحقق بـ OTP.', l3: 'تتبع مصروفات بعملات متعددة مع تصنيف التجار.', tech: 'Flutter • واجهات دفع • QR • Firebase' },
+            wash: { name: 'تطبيقا WashApp و WashApper', desc: 'منصة غسيل وتوصيل عند الطلب للمستخدمين والموصلين والغسالين.', l1: 'تدفقات Flutter كاملة للمستخدمين ومقدمي الخدمة: تنقل بالخرائط، سلة ودفع، خيارات دفع متعددة، محفظة، وتتبع طلبات مباشر.', l2: 'مكونات قابلة لإعادة الاستخدام واعتماديات خفيفة لسرعة البناء وكفاءة حجم التطبيق.', tech: 'Flutter • REST APIs • Stripe • Firebase • خرائط' }
         },
         experience: {
-            title: 'الخبرة المهنية',
-            role: 'مطور Flutter وقائد فريق',
-            company: 'Recovery Jordan',
-            date: 'فبراير 2023 – 15 يناير 2026',
-            l1: 'تطوير تطبيقات جوال عالية الأداء ومركزة على المستخدم لأندرويد و iOS باستخدام Flutter.',
-            l2: 'التعاون الوثيق مع مصممي UI/UX وفرق الخلفية لتقديم حلول سلسة وقابلة للتوسع.',
-            l3: 'قيادة فريق التطوير، إدارة دورة حياة المشروع من جمع متطلبات العميل إلى تقديم تطبيقات وظيفية وفعالة.',
-            l4: 'ضمان التواصل الفعال مع العملاء لفهم احتياجاتهم وترجمتها إلى مهام تطوير قابلة للتنفيذ.'
+            title: 'الخبرة العملية',
+            recovery: {
+                role: 'مطور Flutter وقائد فريق',
+                company: 'Recovery Jordan — عمان، الأردن',
+                date: 'فبراير 2022 – يناير 2026',
+                l1: 'قيادة العمليات التقنية الإجمالية: إدارة البنية التحتية والأنظمة والدعم الفني الداخلي.',
+                l2: 'إدارة دورة حياة كاملة لأكثر من 8 تطبيقات — من المتطلبات والبنية إلى نشر App Store ومتجر Play.',
+                l3: 'التعاون مع المصممين وفرق الخلفية وأصحاب المصلحة لتسليم الحلول في الموعد.',
+                l4: 'تقليل حجم التطبيقات حتى 60% ورفع الأداء عبر تحسين الكود وضغط الأصول و App Aliases.'
+            },
+            freelance: {
+                role: 'مطور Flutter مستقل',
+                company: 'عملاء في الأردن ودولياً',
+                date: 'يناير 2022 – حتى الآن',
+                l1: 'تسليم أكثر من 7 تطبيقات Flutter في النقل والتكنولوجيا المالية والتجارة الإلكترونية لعملاء في الأردن ودولياً.',
+                l2: 'بناء حلول تتبع فوري تخدم مستخدمين مباشرين على أندرويد و iOS.',
+                l3: 'بناء تطبيقات مالية وإدارة تجار.',
+                l4: 'تضمين بوابات دفع وخدمات طرف ثالث.'
+            }
         },
         education: {
             title: 'التعليم',
             degree: 'بكالوريوس في علوم الحاسوب',
             school: 'جامعة الزرقاء',
             date: 'سبتمبر 2018 – فبراير 2022',
+            honors: 'تخرج بمرتبة الشرف',
             langTitle: 'اللغات',
             ar: 'العربية',
             arLevel: 'لغة أم',
             en: 'الإنجليزية',
-            enLevel: 'متمكن'
+            enLevel: 'متوسط'
         },
         tools: {
             title: 'الأدوات والتقنيات',
@@ -228,7 +248,7 @@ const translations = {
             mapsRealtime: 'الخرائط والوقت الفعلي',
             payments: 'المدفوعات',
             devops: 'DevOps والنشر',
-            ads: 'الإعلانات والربح'
+            ads: 'الإعلانات والجودة'
         },
         themeDark: 'داكن',
         themeLight: 'فاتح',
@@ -249,7 +269,7 @@ const translations = {
         },
         footer: {
             copyright: '© 2026 خالد المحاميد',
-            subtitle: 'مطور Flutter — عمان، الأردن'
+            subtitle: 'مطور Flutter وتطبيقات الجوال — عمان، الأردن'
         }
     }
 };

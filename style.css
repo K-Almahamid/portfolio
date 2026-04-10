@@ -1685,6 +1685,10 @@ body.theme-light .project-card:hover .project-tech-list li {
    Experience
    ============================================ */
 
+#experience .experience-card + .experience-card {
+    margin-top: 1.35rem;
+}
+
 .experience-card {
     position: relative;
     overflow: hidden;
@@ -1923,6 +1927,19 @@ body.rtl .education-title {
     color: var(--text-secondary);
     margin: 0;
     font-family: var(--font-mono);
+}
+
+.education-honors {
+    margin: 0.75rem 0 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+}
+
+html[dir="rtl"] .education-honors,
+body.rtl .education-honors {
+    text-align: right;
 }
 
 .languages-title {
