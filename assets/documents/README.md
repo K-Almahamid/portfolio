@@ -1,10 +1,9 @@
 # Documents
 
-The hero **Download CV** and **Download Cover Letter** buttons in `index.html` point to PDFs in the **repository root** (same folder as `index.html`):
+The hero **Download CV** button in `index.html` points to a PDF in the **repository root** (same folder as `index.html`):
 
-- **`Khaled Almahamid CV.pdf`** — CV / resume
-- **`Khaled Almahamid Cover Letter.pdf`** — cover letter
+- **`Khaled_Almahamid_CV.pdf`** — CV / resume
 
-If you move or rename these files, update the `href` attributes on those links in `index.html` so they stay in sync.
+If you move or rename this file, update the `href` attribute on that link in `index.html` so it stays in sync.
 
-You can keep extra copies or drafts in this `assets/documents/` folder if you like; the live site only uses the root paths above unless you change the HTML.
+You can keep extra copies or drafts in this `assets/documents/` folder if you like; the live site only uses the root path above unless you change the HTML.
