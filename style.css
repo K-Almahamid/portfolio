@@ -541,6 +541,18 @@ body.theme-light .hero-title {
     animation: fadeInUp 0.75s ease 0.18s forwards;
 }
 
+.hero-tech {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+    line-height: 1.65;
+    max-width: 52ch;
+    margin-bottom: 0.25rem;
+    opacity: 0;
+    animation: fadeInUp 0.75s ease 0.24s forwards;
+}
+
 .hero-intro-secondary {
     animation-delay: 0.24s;
 }
@@ -584,6 +596,10 @@ body.theme-light .hero-title {
     cursor: pointer;
     border: none;
     font-family: inherit;
+}
+
+.btn:active:not(:disabled) {
+    transform: scale(0.98);
 }
 
 .btn-download {
@@ -723,6 +739,15 @@ body.theme-light .section-contact::before {
     padding-bottom: 1.1rem;
     padding-left: 1rem;
     border-left: 3px solid var(--accent);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.section.is-visible .section-title,
+.section-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section-title::after {
@@ -1144,6 +1169,20 @@ body.rtl .service-card-body {
 
 .project-card:hover::before {
     opacity: 1;
+}
+
+.project-card--featured {
+    border-color: rgba(var(--accent-rgb), 0.28);
+    box-shadow: var(--shadow-card), 0 0 0 1px rgba(var(--accent-rgb), 0.12);
+}
+
+.project-card--featured::before {
+    opacity: 0.65;
+}
+
+.project-card--featured:hover {
+    border-color: rgba(var(--accent-rgb), 0.45);
+    box-shadow: var(--shadow-card), 0 8px 28px rgba(var(--accent-rgb), 0.12);
 }
 
 body.theme-light .project-card:hover {
@@ -2441,6 +2480,47 @@ body.theme-light .footer::before {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-eyebrow,
+    .hero-title,
+    .hero-subtitle,
+    .hero-intro,
+    .hero-intro-secondary,
+    .hero-tech,
+    .hero-buttons {
+        opacity: 1;
+        animation: none;
+    }
+
+    .section-title,
+    .about-content,
+    .skill-card,
+    .service-card,
+    .project-card,
+    .experience-card,
+    .education-card,
+    .languages-card,
+    .tools-category-card,
+    .contact-panel {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .btn,
+    .project-card,
+    .skill-card,
+    .service-card,
+    .nav-action,
+    .tool-chip {
+        transition: none !important;
     }
 }
 

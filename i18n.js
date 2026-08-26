@@ -9,8 +9,8 @@ const translations = {
         common: { name: 'Khaled Almahamid' },
         hero: {
             subtitle: 'Senior Flutter Developer',
-            intro: 'Senior Flutter Developer with 4+ years of professional experience building production Android and iOS applications across ride-hailing, fintech, and e-commerce.',
-            intro2: 'Specializes in Clean Architecture, Bloc/Cubit, REST APIs, Firebase, payment systems, and real-time features — comfortable owning products end-to-end from architecture and CI/CD through production deployment.',
+            intro: '4+ years building production Android & iOS apps with end-to-end ownership — from architecture and APIs through CI/CD and store release.',
+            tech: 'Flutter · Bloc/Cubit · Clean Architecture · Backend APIs · PostgreSQL · Firebase · CI/CD',
             viewProjects: 'View Projects',
             contactMe: 'Contact Me',
             downloadCV: 'Download CV'
@@ -24,7 +24,7 @@ const translations = {
         skills: {
             title: 'Skills',
             mobile: 'Mobile Development',
-            mobile1: 'Flutter, Dart, Bloc, Cubit, Clean Architecture, GetX, Provider, Android, iOS, Kotlin (Flutter–Native integration)',
+            mobile1: 'Flutter, Dart, Bloc, Cubit, Clean Architecture, Android, iOS, Kotlin',
             backend: 'Backend Development',
             backend1: 'Node.js, NestJS, Python, FastAPI, REST APIs, PostgreSQL, Redis',
             firebase: 'Firebase & Mobile Services',
@@ -32,12 +32,12 @@ const translations = {
             maps: 'Maps & Real-Time',
             maps1: 'Google Maps API, Places API, Real-time Tracking, Location Services',
             payments: 'Payments & Monetization',
-            payments1: 'In-App Purchases, RevenueCat, Stripe, PayPal, Apple Pay, Google Pay, Zain Cash, Orange Umniah, Dinark',
-            databases: 'Databases',
-            databases1: 'PostgreSQL, Redis, SQLite, Firebase Realtime Database, Firestore',
+            payments1: 'RevenueCat, In-App Purchases, Stripe, PayPal, Apple Pay, Google Pay, Zain Cash, Orange Umniah, Dinark',
+            infrastructure: 'Data & Infrastructure',
+            infrastructure1: 'PostgreSQL, Redis, Docker, SQLite',
             tools: 'DevOps & CI/CD',
-            tools1: 'Git, GitHub, CI/CD, Fastlane, Docker, Production Deployment, Unit Testing, Widget Testing, Integration Testing',
-            tools2: 'Performance Optimization, Android SDK, iOS SDK, Xcode, Android Studio',
+            tools1: 'Git, GitHub Actions, CI/CD, Fastlane, Shorebird, Docker, unit, widget & integration testing',
+            tools2: 'Production deployment, performance optimization, Android SDK, iOS SDK, Xcode, Android Studio',
             ai: 'AI & AI-Assisted Development',
             ai1: 'AI-assisted coding, prompt engineering, code generation, AI-based debugging, refactoring, and development workflow acceleration'
         },
@@ -45,12 +45,12 @@ const translations = {
             title: 'Services',
             lead: 'What I deliver end to end — from mobile architecture and store releases to backend APIs and dashboards your team can run day to day.',
             app: {
-                title: 'Mobile app development',
+                title: 'Mobile App Development',
                 subtitle: 'Flutter apps for Android & iOS — architecture, integrations, and store-ready builds.',
                 body: 'Production-grade cross-platform apps: Clean Architecture, Bloc/Cubit state management, REST APIs, maps, payments, real-time features, and CI/CD toward Google Play and the App Store.'
             },
             web: {
-                title: 'Backend APIs & dashboards',
+                title: 'Backend APIs & Dashboards',
                 subtitle: 'REST APIs, admin dashboards, and web clients — clear UX, roles, and data at a glance.',
                 body: 'Backend services with Node.js, NestJS, Python, or FastAPI — REST endpoints, PostgreSQL data models, Redis caching, and authentication workflows — plus operator dashboards wired to your APIs or Firebase.'
             }
@@ -66,14 +66,12 @@ const translations = {
             tech: 'Technologies',
             brain: {
                 name: 'Brainogram',
-                desc: 'Large-scale AI-based trading platform spanning mobile, web, and backend — Gold & Silver markets.',
-                l1: 'Built a cross-platform trading platform spanning mobile, web, and backend using Flutter/Dart with Bloc/Cubit and Clean Architecture for a scalable, reusable mobile codebase.',
-                l2: 'Designed and built the backend using Python and FastAPI — REST API endpoints, PostgreSQL data models, Redis caching, authentication workflows, and credit-management logic.',
-                l3: 'Implemented the AI-based trading-analysis workflow, including multiple trading strategies and a market-analysis pipeline that delivers trading signals to mobile and web clients.',
-                l4: 'Integrated Firebase services, push notifications, in-app purchases, and RevenueCat for subscription and credit-based monetization.',
-                l5: 'Owned production infrastructure — containerized services with Docker, deployed to a VPS, and configured CI/CD pipelines for production releases.',
-                l6: 'Optimized performance and maintained security across the mobile app, backend APIs, and trading-analysis pipeline for real-time trading operations.',
-                tech: 'Flutter • Bloc/Cubit • Clean Architecture • Python • FastAPI • PostgreSQL • Redis • Firebase • RevenueCat • Docker • CI/CD'
+                desc: 'Full-stack AI trading platform for Gold & Silver markets — Flutter mobile, FastAPI backend, and real-time analysis pipeline.',
+                l1: 'Owned end-to-end delivery of a cross-platform trading product — Flutter mobile client with Bloc/Cubit and Clean Architecture.',
+                l2: 'Built the FastAPI backend with PostgreSQL and Redis — REST APIs, authentication, credit management, and trading workflows.',
+                l3: 'Implemented an AI market-analysis pipeline with multiple strategies that delivers trading signals to clients in real time.',
+                l4: 'Shipped with RevenueCat monetization, Firebase services, Docker containerization, and CI/CD to production VPS infrastructure.',
+                tech: 'Flutter • FastAPI • PostgreSQL • Redis • AI Pipeline • RevenueCat • Firebase • Docker • CI/CD'
             },
             taxi: {
                 name: 'TaxiK & TaxiK Driver Apps',
@@ -146,46 +144,43 @@ const translations = {
             title: 'Work Experience',
             boj: {
                 role: 'Senior Flutter Developer',
-                company: 'Bank of Jordan — Amman, Jordan · Remote',
+                company: 'Bank of Jordan',
                 date: 'May 2026 – Present',
-                l1: 'Leading the migration of an enterprise mobile application toward Clean Architecture and BLoC state management, refactoring legacy code into a modular, maintainable codebase.',
-                l2: 'Designing reusable application foundations, shared components, and standardized development patterns to improve consistency across the project.',
-                l3: 'Analyzing business requirements and translating them into scalable technical solutions; developing new features and integrating REST APIs.',
-                l4: 'Optimizing application performance, resolving production issues, and collaborating with cross-functional teams while maintaining clean, testable code.'
+                l1: 'Leading enterprise app migration to Clean Architecture and BLoC, refactoring legacy code into a modular codebase.',
+                l2: 'Designing reusable foundations, shared components, and standardized patterns across the project.',
+                l3: 'Developing features, integrating REST APIs, optimizing performance, and resolving production issues.'
             },
             tsme: {
                 role: 'Senior Flutter Developer',
-                company: 'Technology Strategies Middle East (TSME) · Remote',
+                company: 'TSME',
                 date: 'May 2026 – Present',
-                l1: 'Analyzing business requirements and planning and implementing new features for an existing production-level Flutter application built with Clean Architecture and BLoC state management.',
-                l2: 'Owning the full feature development lifecycle — from requirements analysis and scalable solution design to API integration, performance improvements, and production issue resolution.',
-                l3: 'Delivering production-ready updates on a regular cadence while maintaining clean, maintainable code.'
+                l1: 'Planning and implementing features for a production Flutter app built with Clean Architecture and BLoC.',
+                l2: 'Owning the feature lifecycle — requirements, API integration, performance, and production fixes.',
+                l3: 'Delivering production-ready updates while maintaining clean, maintainable code.'
             },
             hrglobal: {
                 role: 'Senior Flutter Developer',
-                company: 'HR Global For Business Development — Amman, Jordan',
+                company: 'HR Global',
                 date: 'Apr 2026 – Aug 2026',
-                l1: 'Maintained existing production mobile applications, most built with Clean Architecture, working independently as the mobile developer responsible for the mobile side of the products.',
-                l2: 'Fixed bugs and resolved application issues across multiple production apps.',
-                l3: 'Developed and implemented new features for existing applications and built new mobile applications from scratch.',
-                l4: 'Owned the mobile application development lifecycle end-to-end for the products under my responsibility.'
+                l1: 'Maintained multiple production apps built with Clean Architecture as the sole mobile developer.',
+                l2: 'Fixed bugs, shipped new features, and built new mobile applications from scratch.',
+                l3: 'Owned the mobile development lifecycle end-to-end for assigned products.'
             },
             recovery: {
                 role: 'Flutter Developer & Team Leader',
-                company: 'Recovery Jordan — Amman, Jordan',
+                company: 'Recovery Jordan',
                 date: 'Feb 2022 – Jan 2026',
                 l1: 'Managed the full lifecycle of 8+ applications — from requirements and architecture to App Store and Google Play deployment.',
                 l2: 'Collaborated with designers, backend teams, and stakeholders to deliver solutions on schedule.',
                 l3: 'Cut app sizes by up to 60% and improved performance through code optimization, asset compression, and App Aliases.'
             },
             freelance: {
-                role: 'Freelance Flutter Developer',
-                company: 'Clients in Jordan & internationally',
+                role: 'Flutter Developer',
+                company: 'Freelance',
                 date: 'Jan 2022 – Present',
-                l1: 'Delivered 7+ Flutter applications across ride-hailing, fintech, and e-commerce for clients in Jordan and internationally.',
-                l2: 'Built real-time tracking solutions serving live users across Android & iOS.',
-                l3: 'Built financial and merchant management applications.',
-                l4: 'Integrated payment gateways and third-party services.'
+                l1: 'Delivered 7+ Flutter apps across ride-hailing, fintech, and e-commerce for clients in Jordan and internationally.',
+                l2: 'Built real-time tracking and financial/merchant management applications.',
+                l3: 'Integrated payment gateways and third-party services.'
             }
         },
         education: {
@@ -214,12 +209,12 @@ const translations = {
         },
         tools: {
             title: 'Tools & Technologies',
-            framework: 'Framework & Language',
-            backend: 'Backend & Data',
-            mapsRealtime: 'Maps & Real-time',
+            mobile: 'Mobile',
+            backend: 'Backend',
+            infrastructure: 'Data & Infrastructure',
+            cloud: 'Cloud & Services',
             payments: 'Payments',
-            devops: 'DevOps & Deployment',
-            ai: 'AI & Quality'
+            mapsRealtime: 'Maps & Real-time'
         },
         themeDark: 'Dark',
         themeLight: 'Light',
@@ -236,8 +231,8 @@ const translations = {
         common: { name: 'خالد المحاميد' },
         hero: {
             subtitle: 'مطور Flutter أول',
-            intro: 'مطور Flutter أول بأكثر من 4 سنوات من الخبرة المهنية في بناء تطبيقات أندرويد و iOS إنتاجية في مجالات النقل والتكنولوجيا المالية والتجارة الإلكترونية.',
-            intro2: 'متخصص في Clean Architecture و Bloc/Cubit و REST APIs و Firebase وأنظمة الدفع والميزات الفورية — مرتاح في امتلاك المنتجات من الطرف إلى الطرف من البنية وCI/CD حتى النشر الإنتاجي.',
+            intro: 'أكثر من 4 سنوات في بناء تطبيقات أندرويد و iOS إنتاجية مع امتلاك المنتج من الطرف إلى الطرف — من البنية وواجهات API حتى CI/CD وإطلاق المتاجر.',
+            tech: 'Flutter · Bloc/Cubit · Clean Architecture · Backend APIs · PostgreSQL · Firebase · CI/CD',
             viewProjects: 'عرض المشاريع',
             contactMe: 'تواصل معي',
             downloadCV: 'تحميل السيرة الذاتية'
@@ -251,7 +246,7 @@ const translations = {
         skills: {
             title: 'المهارات',
             mobile: 'تطوير الجوال',
-            mobile1: 'Flutter، Dart، Bloc، Cubit، Clean Architecture، GetX، Provider، Android، iOS، Kotlin (تكامل Flutter–Native)',
+            mobile1: 'Flutter، Dart، Bloc، Cubit، Clean Architecture، Android، iOS، Kotlin',
             backend: 'تطوير الخلفية',
             backend1: 'Node.js، NestJS، Python، FastAPI، REST APIs، PostgreSQL، Redis',
             firebase: 'Firebase وخدمات الجوال',
@@ -259,12 +254,12 @@ const translations = {
             maps: 'الخرائط والوقت الفعلي',
             maps1: 'Google Maps API، Places API، التتبع الفوري، خدمات الموقع',
             payments: 'المدفوعات والربح',
-            payments1: 'مشتريات داخل التطبيق، RevenueCat، Stripe، PayPal، Apple Pay، Google Pay، Zain Cash، Orange Umniah، Dinark',
-            databases: 'قواعد البيانات',
-            databases1: 'PostgreSQL، Redis، SQLite، Firebase Realtime Database، Firestore',
+            payments1: 'RevenueCat، مشتريات داخل التطبيق، Stripe، PayPal، Apple Pay، Google Pay، Zain Cash، Orange Umniah، Dinark',
+            infrastructure: 'البيانات والبنية التحتية',
+            infrastructure1: 'PostgreSQL، Redis، Docker، SQLite',
             tools: 'DevOps وCI/CD',
-            tools1: 'Git، GitHub، CI/CD، Fastlane، Docker، النشر الإنتاجي، اختبار الوحدة، اختبار الويدجت، اختبار التكامل',
-            tools2: 'تحسين الأداء، Android SDK، iOS SDK، Xcode، Android Studio',
+            tools1: 'Git، GitHub Actions، CI/CD، Fastlane، Shorebird، Docker، اختبار الوحدة والويدجت والتكامل',
+            tools2: 'النشر الإنتاجي، تحسين الأداء، Android SDK، iOS SDK، Xcode، Android Studio',
             ai: 'الذكاء الاصطناعي والتطوير المدعوم به',
             ai1: 'برمجة مدعومة بالذكاء الاصطناعي، هندسة الأوامر، توليد الكود، تصحيح الأخطاء بالذكاء الاصطناعي، إعادة الهيكلة، وتسريع سير عمل التطوير'
         },
@@ -293,14 +288,12 @@ const translations = {
             tech: 'التقنيات',
             brain: {
                 name: 'Brainogram',
-                desc: 'منصة تداول واسعة النطاق مدعومة بالذكاء الاصطناعي تشمل الجوال والويب والخلفية — أسواق الذهب والفضة.',
-                l1: 'بناء منصة تداول عبر المنصات تشمل الجوال والويب والخلفية باستخدام Flutter/Dart مع Bloc/Cubit و Clean Architecture لقاعدة كود جوال قابلة للتوسع وإعادة الاستخدام.',
-                l2: 'تصميم وبناء الخلفية باستخدام Python و FastAPI — نقاط نهاية REST API، نماذج بيانات PostgreSQL، تخزين مؤقت Redis، سير عمل المصادقة، ومنطق إدارة الرصيد.',
-                l3: 'تنفيذ سير عمل تحليل التداول المدعوم بالذكاء الاصطناعي، بما في ذلك استراتيجيات تداول متعددة وخط أنابيب تحليل السوق يقدم إشارات التداول لعملاء الجوال والويب.',
-                l4: 'تكامل خدمات Firebase وإشعارات الدفع والمشتريات داخل التطبيق و RevenueCat للاشتراكات والربح القائم على الرصيد.',
-                l5: 'امتلاك البنية التحتية الإنتاجية — خدمات معزولة بـ Docker، نشر على VPS، وتكوين خطوط CI/CD للإصدارات الإنتاجية.',
-                l6: 'تحسين الأداء والحفاظ على الأمان عبر تطبيق الجوال وواجهات API الخلفية وخط أنابيب تحليل التداول لعمليات التداول الفورية.',
-                tech: 'Flutter • Bloc/Cubit • Clean Architecture • Python • FastAPI • PostgreSQL • Redis • Firebase • RevenueCat • Docker • CI/CD'
+                desc: 'منصة تداول بالذكاء الاصطناعي متكاملة لأسواق الذهب والفضة — تطبيق Flutter، خلفية FastAPI، وخط تحليل فوري.',
+                l1: 'امتلاك التسليم الشامل لمنتج تداول عبر المنصات — عميل Flutter مع Bloc/Cubit و Clean Architecture.',
+                l2: 'بناء الخلفية بـ FastAPI مع PostgreSQL و Redis — REST APIs والمصادقة وإدارة الرصيد وسير عمل التداول.',
+                l3: 'تنفيذ خط تحليل سوق بالذكاء الاصطناعي باستراتيجيات متعددة يقدم إشارات تداول للعملاء في الوقت الفعلي.',
+                l4: 'إطلاق مع RevenueCat وخدمات Firebase وDocker وCI/CD على بنية VPS إنتاجية.',
+                tech: 'Flutter • FastAPI • PostgreSQL • Redis • AI Pipeline • RevenueCat • Firebase • Docker • CI/CD'
             },
             taxi: {
                 name: 'تطبيقا TaxiK و TaxiK Driver',
@@ -373,46 +366,43 @@ const translations = {
             title: 'الخبرة العملية',
             boj: {
                 role: 'مطور Flutter أول',
-                company: 'بنك الأردن — عمان، الأردن · عن بُعد',
+                company: 'بنك الأردن',
                 date: 'مايو 2026 – حتى الآن',
-                l1: 'قيادة ترحيل تطبيق جوال مؤسسي نحو Clean Architecture وإدارة الحالة BLoC، وإعادة هيكلة الكود القديم إلى قاعدة كود معيارية قابلة للصيانة.',
-                l2: 'تصميم أسس تطبيق قابلة لإعادة الاستخدام ومكونات مشتركة وأنماط تطوير موحدة لتحسين الاتساق عبر المشروع.',
-                l3: 'تحليل متطلبات العمل وترجمتها إلى حلول تقنية قابلة للتوسع؛ تطوير ميزات جديدة وتكامل REST APIs.',
-                l4: 'تحسين أداء التطبيق وحل مشاكل الإنتاج والتعاون مع فرق متعددة التخصصات مع الحفاظ على كود نظيف قابل للاختبار.'
+                l1: 'قيادة ترحيل تطبيق مؤسسي نحو Clean Architecture و BLoC وإعادة هيكلة الكود القديم إلى قاعدة معيارية.',
+                l2: 'تصميم أسس قابلة لإعادة الاستخدام ومكونات مشتركة وأنماط موحدة عبر المشروع.',
+                l3: 'تطوير الميزات وتكامل REST APIs وتحسين الأداء وحل مشاكل الإنتاج.'
             },
             tsme: {
                 role: 'مطور Flutter أول',
-                company: 'Technology Strategies Middle East (TSME) · عن بُعد',
+                company: 'TSME',
                 date: 'مايو 2026 – حتى الآن',
-                l1: 'تحليل متطلبات العمل وتخطيط وتنفيذ ميزات جديدة لتطبيق Flutter إنتاجي قائم مبني على Clean Architecture وإدارة الحالة BLoC.',
-                l2: 'امتلاك دورة حياة تطوير الميزات كاملة — من تحليل المتطلبات وتصميم الحلول القابلة للتوسع إلى تكامل API وتحسين الأداء وحل مشاكل الإنتاج.',
-                l3: 'تسليم تحديثات جاهزة للإنتاج بوتيرة منتظمة مع الحفاظ على كود نظيف قابل للصيانة.'
+                l1: 'تخطيط وتنفيذ ميزات لتطبيق Flutter إنتاجي مبني على Clean Architecture و BLoC.',
+                l2: 'امتلاك دورة حياة الميزة — المتطلبات وتكامل API والأداء وإصلاحات الإنتاج.',
+                l3: 'تسليم تحديثات جاهزة للإنتاج مع الحفاظ على كود نظيف قابل للصيانة.'
             },
             hrglobal: {
                 role: 'مطور Flutter أول',
-                company: 'HR Global For Business Development — عمان، الأردن',
+                company: 'HR Global',
                 date: 'أبريل 2026 – أغسطس 2026',
-                l1: 'صيانة تطبيقات جوال إنتاجية قائمة، معظمها مبني على Clean Architecture، بالعمل بشكل مستقل كمطور الجوال المسؤول عن جانب المنتجات.',
-                l2: 'إصلاح الأخطاء وحل مشاكل التطبيق عبر عدة تطبيقات إنتاجية.',
-                l3: 'تطوير وتنفيذ ميزات جديدة للتطبيقات القائمة وبناء تطبيقات جوال جديدة من الصفر.',
-                l4: 'امتلاك دورة حياة تطوير التطبيقات الجوالة من الطرف إلى الطرف للمنتجات تحت مسؤوليتي.'
+                l1: 'صيانة عدة تطبيقات إنتاجية مبنية على Clean Architecture كمطور جوال وحيد.',
+                l2: 'إصلاح الأخطاء وشحن ميزات جديدة وبناء تطبيقات جوال جديدة من الصفر.',
+                l3: 'امتلاك دورة حياة تطوير الجوال من الطرف إلى الطرف للمنتجات المسندة.'
             },
             recovery: {
                 role: 'مطور Flutter وقائد فريق',
-                company: 'Recovery Jordan — عمان، الأردن',
+                company: 'Recovery Jordan',
                 date: 'فبراير 2022 – يناير 2026',
                 l1: 'إدارة دورة حياة كاملة لأكثر من 8 تطبيقات — من المتطلبات والبنية إلى نشر App Store و Google Play.',
                 l2: 'التعاون مع المصممين وفرق الخلفية وأصحاب المصلحة لتسليم الحلول في الموعد.',
                 l3: 'تقليل حجم التطبيقات حتى 60% وتحسين الأداء عبر تحسين الكود وضغط الأصول و App Aliases.'
             },
             freelance: {
-                role: 'مطور Flutter مستقل',
-                company: 'عملاء في الأردن ودولياً',
+                role: 'مطور Flutter',
+                company: 'عمل حر',
                 date: 'يناير 2022 – حتى الآن',
                 l1: 'تسليم أكثر من 7 تطبيقات Flutter في النقل والتكنولوجيا المالية والتجارة الإلكترونية لعملاء في الأردن ودولياً.',
-                l2: 'بناء حلول تتبع فوري تخدم مستخدمين مباشرين على أندرويد و iOS.',
-                l3: 'بناء تطبيقات مالية وإدارة تجار.',
-                l4: 'تكامل بوابات دفع وخدمات طرف ثالث.'
+                l2: 'بناء تطبيقات تتبع فوري وإدارة مالية وتجارية.',
+                l3: 'تكامل بوابات دفع وخدمات طرف ثالث.'
             }
         },
         education: {
@@ -429,12 +419,12 @@ const translations = {
         },
         tools: {
             title: 'الأدوات والتقنيات',
-            framework: 'الإطار واللغة',
-            backend: 'الخلفية والبيانات',
-            mapsRealtime: 'الخرائط والوقت الفعلي',
+            mobile: 'الجوال',
+            backend: 'الخلفية',
+            infrastructure: 'البيانات والبنية التحتية',
+            cloud: 'السحابة والخدمات',
             payments: 'المدفوعات',
-            devops: 'DevOps والنشر',
-            ai: 'الذكاء الاصطناعي والجودة'
+            mapsRealtime: 'الخرائط والوقت الفعلي'
         },
         themeDark: 'داكن',
         themeLight: 'فاتح',

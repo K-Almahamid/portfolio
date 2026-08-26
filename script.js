@@ -317,17 +317,53 @@
         contactForm.reset();
     }
 
+    function prefersReducedMotion() {
+        return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+
     function initScrollAnimations() {
         const animatedElements = document.querySelectorAll(
             '.about-content, .skill-card, .service-card, .project-card, .experience-card, .education-card, .languages-card, .tools-category-card, .contact-panel'
         );
+        const sectionTitles = document.querySelectorAll('.section-title');
+
+        if (prefersReducedMotion()) {
+            animatedElements.forEach((el) => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+            sectionTitles.forEach((el) => el.classList.add('is-visible'));
+            document.querySelectorAll('.section').forEach((section) => section.classList.add('is-visible'));
+            return;
+        }
+
+        if (!('IntersectionObserver' in window)) {
+            animatedElements.forEach((el) => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+            sectionTitles.forEach((el) => el.classList.add('is-visible'));
+            return;
+        }
+
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.section').forEach((section) => sectionObserver.observe(section));
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         entry.target.style.opacity = '1';
                         entry.target.style.transform = 'translateY(0)';
-                    }, index % 3 * 100);
+                    }, index % 3 * 80);
                     observer.unobserve(entry.target);
                 }
             });
@@ -389,7 +425,7 @@
 
         updateThemeIcon();
 
-        if ('IntersectionObserver' in window) initScrollAnimations();
+        if ('IntersectionObserver' in window || prefersReducedMotion()) initScrollAnimations();
     }
 
     if (document.readyState === 'loading') {
