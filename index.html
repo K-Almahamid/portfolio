@@ -196,28 +196,56 @@
     <section id="services" class="section section-void section-services">
         <div class="container">
             <h2 class="section-title" data-i18n="services.title">Services</h2>
-            <p class="section-lead" data-i18n="services.lead">What I deliver end to end — from mobile architecture and store releases to backend APIs and dashboards your team can run day to day.</p>
+            <p class="section-lead" data-i18n="services.lead">Mobile apps, new features, backend APIs, fixes, and full-stack products — practical development services for real client work.</p>
             <div class="services-grid">
                 <article class="service-card">
                     <header class="service-card-head">
                         <span class="service-card-index mono" aria-hidden="true">01</span>
                         <div class="service-card-titles">
-                            <h3 class="service-card-title" data-i18n="services.app.title">Mobile App Development</h3>
-                            <p class="service-card-subtitle" data-i18n="services.app.subtitle">Flutter apps for Android &amp; iOS — architecture, integrations, and store-ready builds.</p>
+                            <h3 class="service-card-title" data-i18n="services.mobileApp.title">Mobile App Development</h3>
                         </div>
                     </header>
-                    <p class="service-card-body" data-i18n="services.app.body">Production-grade cross-platform apps: Clean Architecture, Bloc/Cubit state management, REST APIs, maps, payments, real-time features, and CI/CD toward Google Play and the App Store.</p>
+                    <p class="service-card-body" data-i18n="services.mobileApp.body">Flutter applications for Android &amp; iOS — from product architecture and UI implementation to API integration, testing, and production-ready builds.</p>
                 </article>
                 <article class="service-card">
                     <header class="service-card-head">
                         <span class="service-card-index mono" aria-hidden="true">02</span>
                         <div class="service-card-titles">
-                            <h3 class="service-card-title" data-i18n="services.web.title">Backend APIs &amp; Dashboards</h3>
-                            <p class="service-card-subtitle" data-i18n="services.web.subtitle">REST APIs, admin dashboards, and web clients — clear UX, roles, and data at a glance.</p>
+                            <h3 class="service-card-title" data-i18n="services.mobileFeatures.title">Mobile App Feature Development</h3>
                         </div>
                     </header>
-                    <p class="service-card-body" data-i18n="services.web.body">Backend services with Node.js, NestJS, Python, or FastAPI — REST endpoints, PostgreSQL data models, Redis caching, and authentication workflows — plus operator dashboards wired to your APIs or Firebase.</p>
+                    <p class="service-card-body" data-i18n="services.mobileFeatures.body">Add new features to existing mobile applications — UI screens, API integrations, payments, maps, notifications, authentication, booking flows, and real-time functionality.</p>
                 </article>
+                <article class="service-card">
+                    <header class="service-card-head">
+                        <span class="service-card-index mono" aria-hidden="true">03</span>
+                        <div class="service-card-titles">
+                            <h3 class="service-card-title" data-i18n="services.backendApi.title">Backend API Development</h3>
+                        </div>
+                    </header>
+                    <p class="service-card-body" data-i18n="services.backendApi.body">Build and extend REST APIs, authentication systems, databases, integrations, and backend services using modern backend technologies.</p>
+                </article>
+                <article class="service-card">
+                    <header class="service-card-head">
+                        <span class="service-card-index mono" aria-hidden="true">04</span>
+                        <div class="service-card-titles">
+                            <h3 class="service-card-title" data-i18n="services.backendFix.title">Backend Bug Fixing &amp; Optimization</h3>
+                        </div>
+                    </header>
+                    <p class="service-card-body" data-i18n="services.backendFix.body">Fix API and backend issues, debug existing systems, improve performance, resolve database problems, and optimize existing backend services.</p>
+                </article>
+                <article class="service-card service-card--full">
+                    <header class="service-card-head">
+                        <span class="service-card-index mono" aria-hidden="true">05</span>
+                        <div class="service-card-titles">
+                            <h3 class="service-card-title" data-i18n="services.fullStack.title">Full-Stack Application Development</h3>
+                        </div>
+                    </header>
+                    <p class="service-card-body" data-i18n="services.fullStack.body">Build complete digital products across mobile, web, backend, APIs, databases, authentication, integrations, and deployment.</p>
+                </article>
+            </div>
+            <div class="services-actions">
+                <a href="#contact" class="btn btn-primary services-cta" data-i18n="hero.contactMe">Contact Me</a>
             </div>
         </div>
     </section>
@@ -254,9 +282,172 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="taxi" data-android-url="#" data-ios-url="#">
+
+                <article class="project-card project-card--no-stores" data-project="bookly">
                     <header class="project-card-head">
                         <span class="project-card-index mono" aria-hidden="true">02</span>
+                        <h3 class="project-name" data-i18n="projects.bookly.name">BOOKLY — Booking &amp; Scheduling Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.bookly.subtitle">Book Time For What Matters.</p>
+                    <p class="project-description" data-i18n="projects.bookly.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.bookly.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.bookly.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="pulse">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">03</span>
+                        <h3 class="project-name" data-i18n="projects.pulse.name">PULSE — Personal Finance &amp; Rewards Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.pulse.subtitle">Track Your Money. Earn Rewards. Enjoy More.</p>
+                    <p class="project-description" data-i18n="projects.pulse.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.pulse.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.pulse.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="haven">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">04</span>
+                        <h3 class="project-name" data-i18n="projects.haven.name">HAVEN — Real Estate Property Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.haven.subtitle">A Modern Real Estate Experience Across Web &amp; Mobile.</p>
+                    <p class="project-description" data-i18n="projects.haven.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.haven.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.haven.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="orbit" data-web-shots-title="projects.screenshotsDashboard">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">05</span>
+                        <h3 class="project-name" data-i18n="projects.orbit.name">ORBIT — Enterprise ERP &amp; Business Operations Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.orbit.subtitle">A Unified Platform for Smarter Business Operations.</p>
+                    <p class="project-description" data-i18n="projects.orbit.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.orbit.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.orbit.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="black" data-web-shots-title="projects.screenshotsDashboard">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">06</span>
+                        <h3 class="project-name" data-i18n="projects.black.name">BLACK IRIS — Digital Vouchers &amp; Gift Cards Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.black.subtitle">A Seamless Digital Shopping Experience Across Web &amp; Mobile.</p>
+                    <p class="project-description" data-i18n="projects.black.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.black.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.black.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="vyro" data-web-shots-title="projects.screenshotsDashboard">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">07</span>
+                        <h3 class="project-name" data-i18n="projects.vyro.name">VYRO — Ride-Hailing &amp; Mobility Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.vyro.subtitle">A Modern On-Demand Mobility Experience Across Web &amp; Mobile.</p>
+                    <p class="project-description" data-i18n="projects.vyro.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.vyro.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.vyro.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="medora">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">08</span>
+                        <h3 class="project-name" data-i18n="projects.medora.name">MEDŌRA — Integrated Healthcare Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.medora.subtitle">A Unified Healthcare Experience Across Web &amp; Mobile.</p>
+                    <p class="project-description" data-i18n="projects.medora.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.medora.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.medora.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="nova">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">09</span>
+                        <h3 class="project-name" data-i18n="projects.nova.name">NOVA — Fashion E-Commerce Store</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.nova.subtitle">A Seamless Fashion Shopping Experience Across Web &amp; Mobile.</p>
+                    <p class="project-description" data-i18n="projects.nova.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.nova.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.nova.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card project-card--no-stores" data-project="driveon">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">10</span>
+                        <h3 class="project-name" data-i18n="projects.driveon.name">DRIVEON — Car Rental Platform</h3>
+                    </header>
+                    <p class="project-subtitle visually-hidden" data-i18n="projects.driveon.subtitle">A Seamless Car Rental Experience Across Web &amp; Mobile.</p>
+                    <p class="project-description" data-i18n="projects.driveon.cardDesc"></p>
+                    <div class="project-card-actions">
+                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
+                    </div>
+                    <div class="project-details project-details--collapsed">
+                        <div class="project-body" data-i18n="projects.driveon.body"></div>
+                        <div class="project-tech-block">
+                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
+                            <ul class="project-tech-list" data-i18n-tech="projects.driveon.tech"></ul>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-project="taxi" data-android-url="#" data-ios-url="#">
+                    <header class="project-card-head">
+                        <span class="project-card-index mono" aria-hidden="true">11</span>
                         <h3 class="project-name" data-i18n="projects.taxi.name">TaxiK &amp; TaxiK Driver Apps</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.taxi.desc">Ride-hailing platform with rider and driver apps — live maps, real-time tracking, and lean ~18MB builds.</p>
@@ -283,7 +474,7 @@
                 </article>
                 <article class="project-card" data-project="expert" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">03</span>
+                        <span class="project-card-index mono" aria-hidden="true">12</span>
                         <h3 class="project-name" data-i18n="projects.expert.name">Expert World App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.expert.desc">Marketing &amp; service booking platform with real-time chat, video &amp; voice calls.</p>
@@ -306,34 +497,9 @@
                         </div>
                     </div>
                 </article>
-                <article class="project-card" data-project="black" data-android-url="#" data-ios-url="#">
-                    <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">04</span>
-                        <h3 class="project-name" data-i18n="projects.black.name">Black Iris App</h3>
-                    </header>
-                    <p class="project-description" data-i18n="projects.black.desc">Merchant e-commerce platform with wallet, product plans, invoices, and thermal printer integration (~7MB).</p>
-                    <div class="project-card-actions">
-                        <div class="project-card-actions__stores">
-                        <a href="#" class="btn btn-store btn-store--android" target="_blank" rel="noopener noreferrer" data-store="android"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0008.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9989.4486.9989.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.5758 12 7.5758s-3.5902.6681-5.1349 1.7649L4.8429 5.8377a.4161.4161 0 00-.5676-.1521.4155.4155 0 00-.1521.5676l1.9973 3.4592C2.6889 11.186.8535 12.3074.8535 13.8976 0 15.4878 1.8354 17 4.078 17h15.844c2.2426 0 4.078-1.5122 4.078-3.1024 0-1.5902-1.8354-2.7114-4.0445-4.5762"/></svg></span><span data-i18n="projects.storeAndroid">Android</span></a>
-                        <a href="#" class="btn btn-store btn-store--ios" target="_blank" rel="noopener noreferrer" data-store="ios"><span class="btn-store__icon" aria-hidden="true"><svg class="btn-store__svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span><span data-i18n="projects.storeApp">App Store</span></a>
-                        </div>
-                        <button type="button" class="btn btn-outline project-open-detail" data-i18n="projects.viewDetails">View details</button>
-                    </div>
-                    <div class="project-details project-details--collapsed">
-                        <ul class="project-highlights">
-                            <li data-i18n="projects.black.l1">Built an e-commerce merchant app with wallet, product plans, and advanced filters.</li>
-                            <li data-i18n="projects.black.l2">Launched invoice generation &amp; printer integration with Arabic/English support for retail workflows.</li>
-                            <li data-i18n="projects.black.l3">Trimmed app size to ~7MB and enhanced performance with reusable components.</li>
-                        </ul>
-                        <div class="project-tech-block">
-                            <h4 class="project-tech-label" data-i18n="projects.tech">Technologies</h4>
-                            <ul class="project-tech-list" data-i18n-tech="projects.black.tech"></ul>
-                        </div>
-                    </div>
-                </article>
                 <article class="project-card" data-project="game" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">05</span>
+                        <span class="project-card-index mono" aria-hidden="true">13</span>
                         <h3 class="project-name" data-i18n="projects.game.name">Gamecard App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.game.desc">Merchant app for selling digital game cards with wallet management and local payment integrations.</p>
@@ -358,7 +524,7 @@
                 </article>
                 <article class="project-card" data-project="flower" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">06</span>
+                        <span class="project-card-index mono" aria-hidden="true">14</span>
                         <h3 class="project-name" data-i18n="projects.flower.name">Elegant Flower App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.flower.desc">Full e-commerce flower marketplace with social login and multi-gateway checkout.</p>
@@ -383,7 +549,7 @@
                 </article>
                 <article class="project-card" data-project="nick" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">07</span>
+                        <span class="project-card-index mono" aria-hidden="true">15</span>
                         <h3 class="project-name" data-i18n="projects.nick.name">NicknameLab App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.nick.desc">Text styling and nickname generator with Google Ads and offline SQLite storage.</p>
@@ -409,7 +575,7 @@
                 </article>
                 <article class="project-card" data-project="masraf" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">08</span>
+                        <span class="project-card-index mono" aria-hidden="true">16</span>
                         <h3 class="project-name" data-i18n="projects.masraf.name">Masrafji App</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.masraf.desc">Personal finance app with games, rewards, vouchers, QR flows, and multi-currency tracking.</p>
@@ -434,7 +600,7 @@
                 </article>
                 <article class="project-card" data-project="wash" data-android-url="#" data-ios-url="#">
                     <header class="project-card-head">
-                        <span class="project-card-index mono" aria-hidden="true">09</span>
+                        <span class="project-card-index mono" aria-hidden="true">17</span>
                         <h3 class="project-name" data-i18n="projects.wash.name">WashApp &amp; WashApper Apps</h3>
                     </header>
                     <p class="project-description" data-i18n="projects.wash.desc">On-demand laundry and delivery platform for customers, couriers, and laundry partners.</p>
@@ -488,25 +654,6 @@
                     <div class="experience-head-row">
                         <span class="experience-index mono" aria-hidden="true">02</span>
                         <div class="experience-head-text">
-                            <h3 class="experience-title" data-i18n="experience.tsme.role">Senior Flutter Developer</h3>
-                            <p class="experience-company" data-i18n="experience.tsme.company">TSME</p>
-                            <p class="experience-date" data-i18n="experience.tsme.date">May 2026 – Present</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-content">
-                    <ul>
-                        <li data-i18n="experience.tsme.l1">Planning and implementing features for a production Flutter app built with Clean Architecture and BLoC.</li>
-                        <li data-i18n="experience.tsme.l2">Owning the feature lifecycle — requirements, API integration, performance, and production fixes.</li>
-                        <li data-i18n="experience.tsme.l3">Delivering production-ready updates while maintaining clean, maintainable code.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="experience-head-row">
-                        <span class="experience-index mono" aria-hidden="true">03</span>
-                        <div class="experience-head-text">
                             <h3 class="experience-title" data-i18n="experience.hrglobal.role">Senior Flutter Developer</h3>
                             <p class="experience-company" data-i18n="experience.hrglobal.company">HR Global</p>
                             <p class="experience-date" data-i18n="experience.hrglobal.date">Apr 2026 – Aug 2026</p>
@@ -524,7 +671,7 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="experience-head-row">
-                        <span class="experience-index mono" aria-hidden="true">04</span>
+                        <span class="experience-index mono" aria-hidden="true">03</span>
                         <div class="experience-head-text">
                             <h3 class="experience-title" data-i18n="experience.recovery.role">Flutter Developer &amp; Team Leader</h3>
                             <p class="experience-company" data-i18n="experience.recovery.company">Recovery Jordan</p>
@@ -543,7 +690,7 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="experience-head-row">
-                        <span class="experience-index mono" aria-hidden="true">05</span>
+                        <span class="experience-index mono" aria-hidden="true">04</span>
                         <div class="experience-head-text">
                             <h3 class="experience-title" data-i18n="experience.freelance.role">Flutter Developer</h3>
                             <p class="experience-company" data-i18n="experience.freelance.company">Freelance</p>
@@ -780,6 +927,20 @@
         </div>
     </div>
 
+    <!-- Screenshot preview (lightbox) -->
+    <div id="shotLightbox" class="shot-lightbox" hidden aria-hidden="true">
+        <div class="shot-lightbox__backdrop" data-close-lightbox tabindex="-1" aria-hidden="true"></div>
+        <div class="shot-lightbox__panel" role="dialog" aria-modal="true" aria-labelledby="shotLightboxCaption">
+            <header class="shot-lightbox__header">
+                <button type="button" class="btn btn-secondary shot-lightbox__close" data-close-lightbox data-i18n="projects.previewClose">Close</button>
+            </header>
+            <figure class="shot-lightbox__figure">
+                <img id="shotLightboxImg" class="shot-lightbox__img" src="" alt="">
+                <figcaption id="shotLightboxCaption" class="shot-lightbox__caption"></figcaption>
+            </figure>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -796,6 +957,8 @@
     </footer>
 
     <script src="i18n.js"></script>
+    <script src="projects-content.js"></script>
+    <script src="projects-screenshots.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

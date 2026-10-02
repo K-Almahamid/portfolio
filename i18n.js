@@ -43,16 +43,26 @@ const translations = {
         },
         services: {
             title: 'Services',
-            lead: 'What I deliver end to end — from mobile architecture and store releases to backend APIs and dashboards your team can run day to day.',
-            app: {
+            lead: 'Mobile apps, new features, backend APIs, fixes, and full-stack products — practical development services for real client work.',
+            mobileApp: {
                 title: 'Mobile App Development',
-                subtitle: 'Flutter apps for Android & iOS — architecture, integrations, and store-ready builds.',
-                body: 'Production-grade cross-platform apps: Clean Architecture, Bloc/Cubit state management, REST APIs, maps, payments, real-time features, and CI/CD toward Google Play and the App Store.'
+                body: 'Flutter applications for Android & iOS — from product architecture and UI implementation to API integration, testing, and production-ready builds.'
             },
-            web: {
-                title: 'Backend APIs & Dashboards',
-                subtitle: 'REST APIs, admin dashboards, and web clients — clear UX, roles, and data at a glance.',
-                body: 'Backend services with Node.js, NestJS, Python, or FastAPI — REST endpoints, PostgreSQL data models, Redis caching, and authentication workflows — plus operator dashboards wired to your APIs or Firebase.'
+            mobileFeatures: {
+                title: 'Mobile App Feature Development',
+                body: 'Add new features to existing mobile applications — UI screens, API integrations, payments, maps, notifications, authentication, booking flows, and real-time functionality.'
+            },
+            backendApi: {
+                title: 'Backend API Development',
+                body: 'Build and extend REST APIs, authentication systems, databases, integrations, and backend services using modern backend technologies.'
+            },
+            backendFix: {
+                title: 'Backend Bug Fixing & Optimization',
+                body: 'Fix API and backend issues, debug existing systems, improve performance, resolve database problems, and optimize existing backend services.'
+            },
+            fullStack: {
+                title: 'Full-Stack Application Development',
+                body: 'Build complete digital products across mobile, web, backend, APIs, databases, authentication, integrations, and deployment.'
             }
         },
         projects: {
@@ -62,6 +72,8 @@ const translations = {
             storeApp: 'App Store',
             viewDetails: 'View details',
             detailClose: 'Close',
+            previewClose: 'Close preview',
+            previewScreenshot: 'View full-size screenshot',
             screenshots: 'Screenshots',
             tech: 'Technologies',
             brain: {
@@ -92,8 +104,8 @@ const translations = {
                 tech: 'Flutter • Clean Architecture • Agora • REST APIs • Firebase • Push notifications'
             },
             black: {
-                name: 'Black Iris App',
-                desc: 'Merchant e-commerce platform with wallet, product plans, invoices, and thermal printer integration (~7MB).',
+                name: 'BLACK IRIS — Digital Vouchers & Gift Cards Platform',
+                desc: 'A Seamless Digital Shopping Experience Across Web & Mobile.',
                 l1: 'Built an e-commerce merchant app with wallet, product plans, and advanced filters.',
                 l2: 'Launched invoice generation & printer integration with Arabic/English support for retail workflows.',
                 l3: 'Trimmed app size to ~7MB and enhanced performance with reusable components.',
@@ -149,14 +161,6 @@ const translations = {
                 l1: 'Leading enterprise app migration to Clean Architecture and BLoC, refactoring legacy code into a modular codebase.',
                 l2: 'Designing reusable foundations, shared components, and standardized patterns across the project.',
                 l3: 'Developing features, integrating REST APIs, optimizing performance, and resolving production issues.'
-            },
-            tsme: {
-                role: 'Senior Flutter Developer',
-                company: 'TSME',
-                date: 'May 2026 – Present',
-                l1: 'Planning and implementing features for a production Flutter app built with Clean Architecture and BLoC.',
-                l2: 'Owning the feature lifecycle — requirements, API integration, performance, and production fixes.',
-                l3: 'Delivering production-ready updates while maintaining clean, maintainable code.'
             },
             hrglobal: {
                 role: 'Senior Flutter Developer',
@@ -265,16 +269,26 @@ const translations = {
         },
         services: {
             title: 'الخدمات',
-            lead: 'ما أقدمه من البداية للنهاية — من بنية الجوال وإصدارات المتاجر إلى واجهات API الخلفية ولوحات التحكم التي يعتمد عليها فريقك يومياً.',
-            app: {
+            lead: 'تطبيقات جوال، ميزات جديدة، واجهات API خلفية، إصلاحات، ومنتجات full-stack — خدمات تطوير عملية لعملاء حقيقيين.',
+            mobileApp: {
                 title: 'تطوير تطبيقات الجوال',
-                subtitle: 'تطبيقات Flutter لأندرويد و iOS — بنية، تكاملات، وإصدارات جاهزة للمتاجر.',
-                body: 'تطبيقات عبر المنصات بمستوى إنتاج: Clean Architecture، إدارة الحالة Bloc/Cubit، REST APIs، الخرائط، المدفوعات، الميزات الفورية، وCI/CD باتجاه Google Play وApp Store.'
+                body: 'تطبيقات Flutter لأندرويد و iOS — من بنية المنتج وتنفيذ الواجهات إلى تكامل API والاختبار وبناء جاهز للإنتاج.'
             },
-            web: {
-                title: 'واجهات API خلفية ولوحات تحكم',
-                subtitle: 'REST APIs ولوحات إدارية وعملاء ويب — تجربة واضحة، أدوار، وبيانات في لمحة.',
-                body: 'خدمات خلفية بـ Node.js أو NestJS أو Python أو FastAPI — نقاط نهاية REST، نماذج بيانات PostgreSQL، تخزين مؤقت Redis، وسير عمل المصادقة — بالإضافة إلى لوحات تشغيل متصلة بـ APIs أو Firebase.'
+            mobileFeatures: {
+                title: 'تطوير ميزات تطبيقات الجوال',
+                body: 'إضافة ميزات جديدة لتطبيقات جوال قائمة — شاشات UI، تكاملات API، مدفوعات، خرائط، إشعارات، مصادقة، حجوزات، ووظائف فورية.'
+            },
+            backendApi: {
+                title: 'تطوير واجهات API الخلفية',
+                body: 'بناء وتوسيع REST APIs، أنظمة مصادقة، قواعد بيانات، تكاملات، وخدمات خلفية بتقنيات backend حديثة.'
+            },
+            backendFix: {
+                title: 'إصلاح وتحسين الـ Backend',
+                body: 'إصلاح مشاكل API والـ backend، تصحيح الأنظمة القائمة، تحسين الأداء، حل مشاكل قواعد البيانات، وتحسين الخدمات الخلفية.'
+            },
+            fullStack: {
+                title: 'تطوير تطبيقات Full-Stack',
+                body: 'بناء منتجات رقمية كاملة عبر الجوال والويب والـ backend وAPIs وقواعد البيانات والمصادقة والتكاملات والنشر.'
             }
         },
         projects: {
@@ -284,6 +298,8 @@ const translations = {
             storeApp: 'App Store',
             viewDetails: 'عرض التفاصيل',
             detailClose: 'إغلاق',
+            previewClose: 'إغلاق المعاينة',
+            previewScreenshot: 'عرض لقطة الشاشة بالحجم الكامل',
             screenshots: 'لقطات الشاشة',
             tech: 'التقنيات',
             brain: {
@@ -371,14 +387,6 @@ const translations = {
                 l1: 'قيادة ترحيل تطبيق مؤسسي نحو Clean Architecture و BLoC وإعادة هيكلة الكود القديم إلى قاعدة معيارية.',
                 l2: 'تصميم أسس قابلة لإعادة الاستخدام ومكونات مشتركة وأنماط موحدة عبر المشروع.',
                 l3: 'تطوير الميزات وتكامل REST APIs وتحسين الأداء وحل مشاكل الإنتاج.'
-            },
-            tsme: {
-                role: 'مطور Flutter أول',
-                company: 'TSME',
-                date: 'مايو 2026 – حتى الآن',
-                l1: 'تخطيط وتنفيذ ميزات لتطبيق Flutter إنتاجي مبني على Clean Architecture و BLoC.',
-                l2: 'امتلاك دورة حياة الميزة — المتطلبات وتكامل API والأداء وإصلاحات الإنتاج.',
-                l3: 'تسليم تحديثات جاهزة للإنتاج مع الحفاظ على كود نظيف قابل للصيانة.'
             },
             hrglobal: {
                 role: 'مطور Flutter أول',
