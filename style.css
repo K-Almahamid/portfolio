@@ -418,6 +418,30 @@ section[id] {
     background: linear-gradient(165deg, var(--bg-primary) 0%, rgba(14, 20, 25, 0.85) 50%, var(--bg-primary) 100%);
 }
 
+.hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero-inner .hero-content {
+    margin: 0;
+    max-width: 920px;
+}
+
+@media (min-width: 992px) {
+    .hero-inner .hero-content {
+        max-width: min(100%, 980px);
+    }
+}
+
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -475,13 +499,6 @@ body.theme-light .hero-orb-2 {
     opacity: 0.08;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 720px;
-    margin: 0 auto;
-}
-
 .hero-eyebrow {
     font-size: 0.8rem;
     font-weight: 500;
@@ -536,9 +553,13 @@ body.theme-light .hero-title {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.75;
-    max-width: 56ch;
+    max-width: 72ch;
     opacity: 0;
     animation: fadeInUp 0.75s ease 0.18s forwards;
+}
+
+.hero-intro-secondary {
+    animation-delay: 0.24s;
 }
 
 .hero-tech {
@@ -547,23 +568,55 @@ body.theme-light .hero-title {
     color: var(--text-secondary);
     letter-spacing: 0.01em;
     line-height: 1.65;
-    max-width: 52ch;
-    margin-bottom: 0.25rem;
+    max-width: 100%;
+    margin-bottom: 1.15rem;
     opacity: 0;
-    animation: fadeInUp 0.75s ease 0.24s forwards;
+    animation: fadeInUp 0.75s ease 0.3s forwards;
 }
 
-.hero-intro-secondary {
-    animation-delay: 0.24s;
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0 0 0.25rem;
+    padding: 0;
+    opacity: 0;
+    animation: fadeInUp 0.75s ease 0.36s forwards;
+}
+
+.hero-highlight {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--text-primary);
+    padding: 0.38rem 0.65rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: rgba(18, 26, 34, 0.65);
+}
+
+body.theme-light .hero-highlight {
+    background: var(--bg-elevated);
+}
+
+.hero-highlight__label {
+    color: var(--text-secondary);
+}
+
+html[dir="rtl"] .hero-highlights,
+body.rtl .hero-highlights {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
 .hero-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-top: 2rem;
+    margin-top: 1.75rem;
     opacity: 0;
-    animation: fadeInUp 0.75s ease 0.32s forwards;
+    animation: fadeInUp 0.75s ease 0.42s forwards;
 }
 
 .hero-buttons .btn {

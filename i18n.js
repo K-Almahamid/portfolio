@@ -10,7 +10,11 @@ const translations = {
         hero: {
             subtitle: 'Senior Flutter Developer',
             intro: '4+ years building production Android & iOS apps with end-to-end ownership — from architecture and APIs through CI/CD and store release.',
+            intro2: 'Cross-platform mobile, backend APIs, and full-stack delivery — ride-hailing, fintech, e-commerce, and client-ready products from architecture through deployment.',
             tech: 'Flutter · Bloc/Cubit · Clean Architecture · Backend APIs · PostgreSQL · Firebase · CI/CD',
+            highlight1: 'Production Android & iOS',
+            highlight2: 'REST APIs & real-time features',
+            highlight3: 'Amman, Jordan · EN / AR',
             viewProjects: 'View Projects',
             contactMe: 'Contact Me',
             downloadCV: 'Download CV'
@@ -236,7 +240,11 @@ const translations = {
         hero: {
             subtitle: 'مطور Flutter أول',
             intro: 'أكثر من 4 سنوات في بناء تطبيقات أندرويد و iOS إنتاجية مع امتلاك المنتج من الطرف إلى الطرف — من البنية وواجهات API حتى CI/CD وإطلاق المتاجر.',
+            intro2: 'جوال عبر المنصات، واجهات API خلفية، وتسليم full-stack — نقل، تكنولوجيا مالية، تجارة إلكترونية، ومنتجات جاهزة للعملاء من البنية حتى النشر.',
             tech: 'Flutter · Bloc/Cubit · Clean Architecture · Backend APIs · PostgreSQL · Firebase · CI/CD',
+            highlight1: 'أندرويد و iOS إنتاجي',
+            highlight2: 'REST APIs وميزات فورية',
+            highlight3: 'عمان، الأردن · EN / AR',
             viewProjects: 'عرض المشاريع',
             contactMe: 'تواصل معي',
             downloadCV: 'تحميل السيرة الذاتية'
