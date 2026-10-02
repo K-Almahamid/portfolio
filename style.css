@@ -1472,6 +1472,7 @@ body.theme-light .btn-store--ios {
 .project-open-detail {
     flex: 0 0 auto;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 @media (max-width: 380px) {
@@ -3176,5 +3177,128 @@ body.theme-light .footer::before {
             padding-left: max(1rem, env(safe-area-inset-left));
             padding-right: max(1rem, env(safe-area-inset-right));
         }
+    }
+}
+
+/* ============================================
+   Project detail pages (/projects/{slug}/)
+   ============================================ */
+
+body.project-page {
+    min-height: 100vh;
+}
+
+.project-page-main {
+    padding-top: calc(var(--nav-height, 4.5rem) + 2rem);
+    padding-bottom: 4rem;
+}
+
+.project-page-shell {
+    max-width: 56rem;
+}
+
+.project-page-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 2rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.project-page-back:hover {
+    color: var(--text-primary);
+    opacity: 0.9;
+}
+
+.project-page-inner {
+    padding: 0;
+    max-width: none;
+}
+
+.project-page__header {
+    margin-bottom: 2rem;
+}
+
+.project-page__index {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+}
+
+.project-page__title {
+    margin: 0 0 0.65rem;
+    font-size: clamp(1.75rem, 4vw, 2.35rem);
+    line-height: 1.15;
+}
+
+.project-page__subtitle {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.project-page__lead,
+.project-page__body {
+    margin: 0 0 2rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    max-width: 42rem;
+}
+
+.project-page__tech {
+    margin-bottom: 2.5rem;
+}
+
+.project-page__highlights {
+    margin-bottom: 3rem;
+}
+
+.project-page__highlights .project-highlights {
+    margin: 0;
+}
+
+.project-page__stores {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-page__shots {
+    margin-top: 3rem;
+    margin-bottom: 0;
+}
+
+.project-page__shots:first-of-type {
+    margin-top: 2.5rem;
+}
+
+.section-title--compact {
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+}
+
+.project-page .project-overlay__shots-grid--web,
+.project-page .project-overlay__shots-grid--mobile {
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .project-page-main {
+        padding-top: calc(var(--nav-height, 4.5rem) + 1.25rem);
+        padding-bottom: 3rem;
+    }
+
+    .project-page-back {
+        margin-bottom: 1.5rem;
     }
 }
